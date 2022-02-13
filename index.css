@@ -1,0 +1,318 @@
+@font-face {
+  font-family: "KOHIBaeumOTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  user-select: none;
+  --colBg: #333;
+  --colMenu: #111;
+  --colMenuBtn: #bbb;
+  --colUpgBorder: #080;
+  --colUpgBg: #040;
+  --colUpgName: #080;
+  --colUpgPrice: #040;
+  --colUpgPriceStroke: #080;
+  --colUpgBlur: #060;
+  --colDescTxt: #0c0;
+  --colTabBg: #333;
+  --colInputBg: #555;
+  --colTabCloseBtn: #d00;
+}
+
+body {
+  background-color: var(--colBg);
+  font-family: "KOHIBaeumOTF";
+  overflow: hidden;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#menu {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: var(--colMenu);
+  box-shadow: 0 0 20px 2px var(--colMenu);
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  z-index: 999999;
+  transition: all 0.15s;
+}
+
+#menu.opened {
+  height: 210px;
+}
+
+.menu-button:not(#menuBtn) {
+  display: none;
+}
+
+#menu.opened > .menu-button:not(#menuBtn) {
+  display: flex;
+}
+
+.menu-button {
+  border-radius: 35px;
+  background-color: var(--colMenu);
+  box-shadow: 0 0 20px 2px var(--colMenu);
+  transition: all 0.15s;
+  width: 70px;
+  height: 70px;
+  color: var(--colMenuBtn);
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button:not(#menuBtn) {
+  text-align: center;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.menu-button:active {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+#menuBtn div {
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  border-radius: 1.5px;
+  background-color: var(--colMenuBtn);
+}
+#menuBtn div::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  height: 3px;
+  width: 30px;
+  border-radius: 1.5px;
+  background-color: var(--colMenuBtn);
+}
+#menuBtn div::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  height: 3px;
+  width: 30px;
+  border-radius: 1.5px;
+  background-color: var(--colMenuBtn);
+}
+
+.upgrade:not(.bought) {
+  filter: grayscale(1);
+}
+
+.upgrade {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 12em;
+  height: 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+  border-radius: 1.25em;
+  vertical-align: center;
+  border: 3px solid var(--colUpgBorder);
+  background-color: var(--colUpgBg);
+  box-shadow: 0 0 20px 2px var(--colUpgBlur);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.upgrade:hover {
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%) scale(1.1);
+}
+
+.upgrade:active {
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%) scale(1.05);
+}
+
+.upgrade-name {
+  font-size: 1.7em;
+  height: 1.2em;
+  color: var(--colUpgName);
+}
+
+.upgrade-price {
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: var(--colUpgPrice);
+  text-shadow: -1px -1px 0 var(--colUpgPriceStroke),
+    1px -1px 0 var(--colUpgPriceStroke), -1px 1px 0 var(--colUpgPriceStroke),
+    1px 1px 0 var(--colUpgPriceStroke);
+  white-space: nowrap;
+}
+
+#connectionCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+.description {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  margin-top: 2em;
+  width: calc(12em * 2);
+  border-radius: 1.25em;
+  padding: 0.4em;
+  border: 3px solid var(--colUpgBorder);
+  background-color: var(--colUpgBg);
+  color: var(--colDescTxt);
+  pointer-events: none;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.description:not(.bought) {
+  filter: grayscale(1);
+}
+
+.description.shown {
+  visibility: visible;
+  opacity: 1;
+}
+
+#calcTab.shown {
+  visibility: visible;
+  opacity: 1;
+}
+
+#calcTab {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(7px);
+  background-color: #6664;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+#calculation {
+  position: relative;
+  width: 70vw;
+  height: 70vh;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 60% 40%;
+  background-color: var(--colTabBg);
+  box-shadow: 0 0 20px 3px var(--colTabBg);
+  color: #999;
+}
+
+#calcCloseBtn {
+  position: absolute;
+  font-size: 3em;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  border-top-right-radius: 20px;
+  background-color: var(--colTabCloseBtn);
+  transition: background-color 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#calcCloseBtn:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+#calcFormulaText {
+  font-size: 0.6em;
+}
+
+#calcFormula {
+  height: 100%;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 2em;
+}
+
+#calcFormula > div {
+  display: flex;
+}
+
+.calc-arrow {
+  font-size: 2em;
+}
+
+.calc-input {
+  background-color: var(--colInputBg);
+  border: 0px;
+  height: 2em;
+  font-size: 0.6em;
+
+  font-family: "KOHIBaeumOTF";
+}
+
+#calcUpgrades {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 20% 40% 40%;
+  margin-top: 1em;
+}
+
+#calcUpgrades > span {
+  text-align: center;
+  grid-column: 1/3;
+  font-size: 2em;
+}
+
+.calc-upgrade {
+  margin: auto;
+  font-size: 2em;
+  width: 5em;
+  text-align: center;
+  border-radius: 0.5em;
+  background-color: #444;
+  transition: background-color 0.15s ease;
+}
+
+.calc-upgrade.activated {
+  background-color: #666;
+}
+
+.calc-upgrade:hover {
+  cursor: pointer;
+  background-color: #777;
+}
+
+.calc-upgrade.activated:hover {
+  cursor: pointer;
+  background-color: #777;
+}
