@@ -137,14 +137,14 @@ input::-webkit-inner-spin-button {
 .upgrade {
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
-  width: 12em;
-  height: 2.5em;
+  width: 10em;
+  height: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   text-align: center;
-  border-radius: 1.25em;
+  border-radius: 0.7em;
   vertical-align: center;
   border: 3px solid var(--colUpgBorder);
   background-color: var(--colUpgBg);
@@ -164,14 +164,14 @@ input::-webkit-inner-spin-button {
 }
 
 .upgrade-name {
-  font-size: 1.7em;
+  font-size: 1.5em;
   height: 1.2em;
   color: var(--colUpgName);
 }
 
 .upgrade-price {
   position: absolute;
-  top: 2em;
+  top: 1.7em;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -193,7 +193,7 @@ input::-webkit-inner-spin-button {
   position: absolute;
   transform: translateX(-50%);
   margin-top: 2em;
-  width: calc(12em * 2);
+  width: calc(10em * 2);
   border-radius: 1.25em;
   padding: 0.4em;
   border: 3px solid var(--colUpgBorder);

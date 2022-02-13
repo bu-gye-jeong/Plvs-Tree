@@ -185,7 +185,7 @@ const upgradeData = [
     name: "< Point >",
     price: "1MsP >=800 -50 2h",
     description: `게임 상태를 "티어 1"으로 변경합니다.`,
-    position: { x: "70%", y: "5%" },
+    position: { x: "80%", y: "5%" },
     bought: true,
     color: {
       hueRotate: "170deg",
@@ -306,7 +306,7 @@ const connectionData = [
   [2, 8],
   [2, 11],
   [5, 11],
-  [9, 10],
+  [10, 9],
   [10, 12],
   [10, 13],
   [12, 14],
@@ -379,6 +379,7 @@ Array.from(document.querySelectorAll(".upgrade")).forEach((v, i) =>
   })
 );
 
+// render lines
 setInterval(draw, 100);
 
 function draw() {
@@ -387,7 +388,7 @@ function draw() {
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
 
-  ctx.lineWidth = 10;
+  ctx.lineWidth = 5;
   for (item of connectionData) {
     const pos = item.map((v, i) => {
       if (i >= 2) return;
@@ -402,6 +403,57 @@ function draw() {
     ctx.moveTo(pos[0].x, pos[0].y);
     ctx.lineTo(pos[1].x, pos[1].y);
     ctx.setLineDash(item[2] ? [10, 10] : []);
+    ctx.strokeStyle =
+      upgradeData[item[0]].bought && upgradeData[item[1]].bought
+        ? "#888"
+        : "#444";
+    ctx.stroke();
+
+    const middle = {
+      x: (pos[0].x + pos[1].x) / 2,
+      y: (pos[0].y + pos[1].y) / 2,
+    };
+    const arrowLength = 13;
+    // arrow
+    ctx.beginPath();
+    ctx.moveTo(middle.x, middle.y);
+    ctx.lineTo(
+      middle.x +
+        arrowLength *
+          Math.cos(
+            (3 / 4) * Math.PI +
+              Math.atan2(pos[1].y - pos[0].y, pos[1].x - pos[0].x)
+          ),
+      middle.y +
+        arrowLength *
+          Math.sin(
+            (3 / 4) * Math.PI +
+              Math.atan2(pos[1].y - pos[0].y, pos[1].x - pos[0].x)
+          )
+    );
+    ctx.setLineDash([]);
+    ctx.strokeStyle =
+      upgradeData[item[0]].bought && upgradeData[item[1]].bought
+        ? "#888"
+        : "#444";
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(middle.x, middle.y);
+    ctx.lineTo(
+      middle.x +
+        arrowLength *
+          Math.cos(
+            (5 / 4) * Math.PI +
+              Math.atan2(pos[1].y - pos[0].y, pos[1].x - pos[0].x)
+          ),
+      middle.y +
+        arrowLength *
+          Math.sin(
+            (5 / 4) * Math.PI +
+              Math.atan2(pos[1].y - pos[0].y, pos[1].x - pos[0].x)
+          )
+    );
     ctx.strokeStyle =
       upgradeData[item[0]].bought && upgradeData[item[1]].bought
         ? "#888"
