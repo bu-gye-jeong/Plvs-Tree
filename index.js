@@ -432,6 +432,7 @@ Array.from(menuButtons).forEach((v) => {
   const tabBg = document.querySelector(
     `.tab-bg[data-tabid='${v.dataset.tabid}']`
   );
+  if (!tabBg) return;
   v.addEventListener("click", () =>
     tabBg.classList.contains("shown")
       ? tabBg.classList.remove("shown")
@@ -446,10 +447,6 @@ Array.from(tabCloseBtns).forEach((v) =>
       .classList.remove("shown")
   )
 );
-
-// document.querySelectorAll(".calc-input").addEventListener("input", (e) => {
-//   e.target.style.width = e.target.value.length + "ch";
-// });
 
 const calcTimeInput = document.querySelector("#calcTimeInput");
 const calcSizeInput = document.querySelector("#calcSizeInput");
@@ -528,8 +525,13 @@ const timeInputHandler = (v) => {
   calcTime = +v;
   calcSize = (3 * (calcTime - 1) * calcTime) / 2 + 1;
   calcPoint = Math.floor(
-    (((calcUpgrades[0] ? 120 : 100) * (calcUpgrades[1] ? 140 : 100)) / 10000) *
-      calcCottened.apply(calcFibered.apply(calcSize))
+    calcCottened.apply(
+      calcFibered.apply(
+        (((calcUpgrades[0] ? 120 : 100) * (calcUpgrades[1] ? 140 : 100)) /
+          10000) *
+          calcSize
+      )
+    )
   );
   calcNumber = Math.floor(calcPoint / 100);
   setFormula();
@@ -556,7 +558,7 @@ const pointInputHandler = (v) => {
   calcSize =
     (10000 / ((calcUpgrades[0] ? 120 : 100) * (calcUpgrades[1] ? 140 : 100))) *
     calcFibered.invApply(calcCottened.invApply(calcPoint));
-  calcTime = 1 / 2 + Math.sqrt((3 / 2) * calcSize - 15 / 16);
+  calcTime = Math.sqrt(3 * (8 * calcSize - 5)) / 6 + 1 / 2;
   calcNumber = Math.floor(calcPoint / 100);
   setFormula();
 };
@@ -573,15 +575,14 @@ calcPointInput.addEventListener("input", (e) => {
 
 function setFormula() {
   document.querySelector("#calcFormulaText").innerHTML = `
-  Fibered 200
+  수정 포인트+${
+    calcUpgrades[0] ? (calcUpgrades[1] ? 68 : 20) : calcUpgrades[1] ? 40 : 0
+  }%<br>Fibered 200
   ${calcSize >= 200 ? "적용" : "미적용"}
   *${calcUpgrades[4] ? 90 : 80}%<br>
   Cottened ${calcCottened.from()} 
   ${calcSize >= calcCottened.from() ? "적용" : "미적용"} 
-  ^${calcUpgrades[3] ? 0.79 : 0.7}<br>
-  수정 포인트+${
-    calcUpgrades[0] ? (calcUpgrades[1] ? 68 : 20) : calcUpgrades[1] ? 40 : 0
-  }%`;
+  ^${calcUpgrades[3] ? 0.79 : 0.7}`;
 
   calcTimeInput.value = (Math.floor(calcTime * 10) / 10).toLocaleString(
     "fullwide",
