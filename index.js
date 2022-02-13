@@ -448,7 +448,9 @@ let calcPoint = 1;
 let calcNumber = 1;
 let lastUsedCalc = 0;
 
-const calcUpgrades = new Array(4).fill(false);
+const calcUpgrades = new Array(
+  document.querySelector("#calcUpgrades").children.length - 1
+).fill(false);
 const calcUpgradeButtons = document.querySelectorAll(".calc-upgrade");
 Array.from(calcUpgradeButtons).forEach((v, i) =>
   v.addEventListener("click", () => {
@@ -494,12 +496,16 @@ const calcFibered = {
   },
   apply(v) {
     return v >= calcFibered.from()
-      ? ((v - calcFibered.from()) * 4) / 5 + calcFibered.from()
+      ? (calcUpgrades[4]
+          ? ((v - calcFibered.from()) * 9) / 10
+          : ((v - calcFibered.from()) * 4) / 5) + calcFibered.from()
       : v;
   },
   invApply(v) {
     return v >= calcFibered.from()
-      ? ((v - calcFibered.from()) * 5) / 4 + calcFibered.from()
+      ? (calcUpgrades[4]
+          ? ((v - calcFibered.from()) * 10) / 9
+          : ((v - calcFibered.from()) * 5) / 4) + calcFibered.from()
       : v;
   },
 };
@@ -557,7 +563,9 @@ function setFormula() {
   Cottened ${calcCottened.from()} 
   ${calcSize >= calcCottened.from() ? "적용" : "미적용"} 
   ^${calcUpgrades[3] ? 0.79 : 0.7}<br>
-  Fibered 200 ${calcSize >= 200 ? "적용" : "미적용"}<br>
+  Fibered 200 
+  ${calcSize >= 200 ? "적용" : "미적용"}
+  *${calcUpgrades[4] ? 90 : 80}%<br>
   수정 포인트+${(calcUpgrades[0] ? 20 : 0) + (calcUpgrades[1] ? 40 : 0)}%`;
 
   calcTimeInput.value = Math.floor(calcTime * 10) / 10;
