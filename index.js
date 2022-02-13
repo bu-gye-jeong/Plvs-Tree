@@ -101,7 +101,7 @@ const upgradeData = [
     price: "1MsP >=500",
     description: "구매에 일정 시간을 요구하는 업그레이드를 추가합니다.",
     position: { x: "90%", y: "25%" },
-    bought: false,
+    bought: true,
     color: {
       hueRotate: "230deg",
       saturate: "50%",
@@ -279,6 +279,18 @@ const upgradeData = [
       brightness: "80%",
     },
   },
+  {
+    name: "계산기 제작",
+    price: "계산기(품질 40+) 1개",
+    description: "숫자를 셀 때 1% 확률로 계산기를 생성합니다.",
+    position: { x: "90%", y: "45%" },
+    bought: false,
+    color: {
+      hueRotate: "100deg",
+      saturate: "10%",
+      brightness: "300%",
+    },
+  },
 ];
 const connectionData = [
   [0, 1],
@@ -311,6 +323,7 @@ const connectionData = [
   [2, 21],
   [4, 21],
   [13, 22],
+  [7, 23],
 ];
 
 // render Upgrades
