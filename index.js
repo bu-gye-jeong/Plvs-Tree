@@ -89,7 +89,7 @@ const upgradeData = [
     description:
       "수정을 정산할 때, 수정 크기에 비례하는 확률로 효과를 가진 무언가를 얻습니다.",
     position: { x: "70%", y: "25%" },
-    bought: false,
+    bought: true,
     color: {
       hueRotate: "60deg",
       saturate: "50%",
@@ -162,7 +162,7 @@ const upgradeData = [
     price: "-150",
     description: "수정 크기의 Cottoned 소프트캡이 1500cm³ 미뤄집니다.",
     position: { x: "50%", y: "35%" },
-    bought: false,
+    bought: true,
     color: {
       hueRotate: "270deg",
       saturate: "0%",
@@ -197,7 +197,7 @@ const upgradeData = [
     name: "석고",
     price: "-100 48h",
     description: "수정 크기의 Cottoned 소프트캡이 30% 약화됩니다.",
-    position: { x: "50%", y: "45%" },
+    position: { x: "10%", y: "55%" },
     bought: false,
     color: {
       hueRotate: "220deg",
@@ -267,6 +267,18 @@ const upgradeData = [
       brightness: "120%",
     },
   },
+  {
+    name: "공작석",
+    price: "1MsP",
+    description: "수정 포인트의 fibered가 50% 약화됩니다.",
+    position: { x: "50%", y: "45%" },
+    bought: false,
+    color: {
+      hueRotate: "50deg",
+      saturate: "100%",
+      brightness: "80%",
+    },
+  },
 ];
 const connectionData = [
   [0, 1],
@@ -298,6 +310,7 @@ const connectionData = [
   [10, 20],
   [2, 21],
   [4, 21],
+  [13, 22],
 ];
 
 // render Upgrades
