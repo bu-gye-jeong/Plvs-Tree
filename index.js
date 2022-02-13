@@ -256,7 +256,7 @@ const upgradeData = [
   },
   {
     name: "수동적 실수",
-    price: "T1 1MsP >=2000",
+    price: "T1 1MsP 1m",
     description:
       "어떠한 이유로 관리자가 숫자를 셀 경우, 10% 확률로 숫자를 잘못 셉니다. 이 경우, 잘못 센 대가로 숫자가 5 추가로 증가합니다.",
     position: { x: "10%", y: "5%" },
