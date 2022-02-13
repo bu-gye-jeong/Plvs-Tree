@@ -575,13 +575,13 @@ function setFormula() {
   document.querySelector("#calcFormulaText").innerHTML = `
   수정 포인트+${
     calcUpgrades[0] ? (calcUpgrades[1] ? 68 : 20) : calcUpgrades[1] ? 40 : 0
-  }%
+  }%<br>
   Fibered 200 
   ${calcSize >= 200 ? "적용" : "미적용"}
   *${calcUpgrades[4] ? 90 : 80}%<br>
   Cottened ${calcCottened.from()} 
   ${calcSize >= calcCottened.from() ? "적용" : "미적용"} 
-  ^${calcUpgrades[3] ? 0.79 : 0.7}<br>`;
+  ^${calcUpgrades[3] ? 0.79 : 0.7}`;
 
   calcTimeInput.value = Math.floor(calcTime * 10) / 10;
   calcSizeInput.value = Math.floor(calcSize * 10) / 10;
