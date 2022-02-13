@@ -87,7 +87,7 @@ const upgradeData = [
     name: "아이템화",
     price: "1MsP >=700 -200",
     description:
-      "수정을 정산할 때, 수정 크기에 비례하는 확률로 효과를 가진 무언가를 얻습니다.",
+      "수정을 정산할 때, 수정 크기에 비례하는 확률로 품질 10~50의 계산기를 얻습니다.",
     position: { x: "70%", y: "25%" },
     bought: true,
     color: {
