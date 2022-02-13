@@ -14,7 +14,7 @@ const upgradeData = [
   {
     name: "자동화 I",
     price: "1MsP",
-    description: "1시간마다, 숫자가 1 증가합니다.",
+    description: "1시간마다, 숫자가 1 증가합니다.(베개가 잘 때 제외)",
     position: { x: "30%", y: "15%" },
     bought: true,
     color: {
@@ -62,7 +62,7 @@ const upgradeData = [
   {
     name: "자동화 II",
     price: "1MsP",
-    description: "매일 아침 11시마다, 숫자가 8 증가합니다.",
+    description: "매일 아침 11시(등교시 오전 6시)마다, 숫자가 8 증가합니다.",
     position: { x: "30%", y: "25%" },
     bought: true,
     color: {
@@ -124,8 +124,7 @@ const upgradeData = [
   {
     name: "결정화",
     price: "1MsP >=200",
-    description:
-      "수정 포인트를 해금합니다. 수정은 1로 시작해서 일정 시간마다 3n(n은 자란 횟수)만큼 자라고, 수정의 크기는 수정 포인트와 1대1로 대응됩니다. 수정 포인트를 정산하면, 수정이 초기화되고, 숫자는 수정 포인트를 100으로 나눈 몫만큼 늘어납니다.",
+    description: "수정 포인트를 해금합니다.",
     position: { x: "30%", y: "35%" },
     bought: true,
     color: {
@@ -161,8 +160,7 @@ const upgradeData = [
   {
     name: "방해석",
     price: "-150",
-    description:
-      "수정 크기의 Cottoned 소프트캡이 1500cm³ 미뤄집니다. (Cottoned 소프트캡은, 적용 이후의 값에 ^0.7 승수를 적용합니다.[기본 소프트캡은 3000] 예를 들면 현재 숫자가 8000인데, 2000부터 적용되는 Cottoned의 영향을 받은 경우 2000 + 6000^0.7 = 2441이 됩니다.)",
+    description: "수정 크기의 Cottoned 소프트캡이 1500cm³ 미뤄집니다.",
     position: { x: "50%", y: "35%" },
     bought: false,
     color: {
@@ -198,8 +196,7 @@ const upgradeData = [
   {
     name: "석고",
     price: "-100 48h",
-    description:
-      "수정 크기의 Cottoned 소프트캡이 30% 약화됩니다. (Cottoned 소프트캡은, 적용 이후의 값에 ^0.7 승수를 적용합니다.[기본 소프트캡은 3000] 예를 들면 현재 숫자가 8000인데, 2000부터 적용되는 Cottoned의 영향을 받은 경우 2000 + 6000^0.7 = 2441이 됩니다.)",
+    description: "수정 크기의 Cottoned 소프트캡이 30% 약화됩니다.",
     position: { x: "50%", y: "45%" },
     bought: false,
     color: {
@@ -248,7 +245,7 @@ const upgradeData = [
     name: "활석",
     price: "T1 1MsP >=2000",
     description:
-      "수정 크기의 하드캡을 없앱니다. 다만, 3000cm³부터 소프트캡이 적용되기 시작합니다.",
+      "수정 크기의 하드캡을 없앱니다. 다만, 3000cm³부터 소프트캡들이 적용되기 시작합니다.",
     position: { x: "10%", y: "45%" },
     bought: false,
     color: {
@@ -403,16 +400,30 @@ menuBtn.addEventListener("click", () =>
     : menu.classList.add("opened")
 );
 
-const calcBtn = document.querySelector("#calcBtn");
-const calcCloseBtn = document.querySelector("#calcCloseBtn");
-const calcTab = document.querySelector("#calcTab");
-const calcBtnOpened = false;
-calcBtn.addEventListener("click", () =>
-  calcTab.classList.contains("shown")
-    ? calcTab.classList.remove("shown")
-    : calcTab.classList.add("shown")
+const menuButtons = document.querySelectorAll(".menu-button");
+const tabCloseBtns = document.querySelectorAll(".tab-close-btn");
+Array.from(menuButtons).forEach((v) => {
+  const tabBg = document.querySelector(
+    `.tab-bg[data-tabid='${v.dataset.tabid}']`
+  );
+  v.addEventListener("click", () =>
+    tabBg.classList.contains("shown")
+      ? tabBg.classList.remove("shown")
+      : tabBg.classList.add("shown")
+  );
+});
+
+Array.from(tabCloseBtns).forEach((v) =>
+  v.addEventListener("click", () =>
+    document
+      .querySelector(`.tab-bg[data-tabid='${v.dataset.tabid}']`)
+      .classList.remove("shown")
+  )
 );
-calcCloseBtn.addEventListener("click", () => calcTab.classList.remove("shown"));
+
+// document.querySelectorAll(".calc-input").addEventListener("input", (e) => {
+//   e.target.style.width = e.target.value.length + "ch";
+// });
 
 const calcTimeInput = document.querySelector("#calcTimeInput");
 const calcSizeInput = document.querySelector("#calcSizeInput");
@@ -518,15 +529,15 @@ const pointInputHandler = (v) => {
   setFormula();
 };
 
-calcTimeInput.addEventListener("change", (e) =>
+calcTimeInput.addEventListener("input", (e) =>
   timeInputHandler(e.target.value)
 );
-calcSizeInput.addEventListener("change", (e) =>
+calcSizeInput.addEventListener("input", (e) =>
   sizeInputHandler(e.target.value)
 );
-calcPointInput.addEventListener("change", (e) =>
-  pointInputHandler(e.target.value)
-);
+calcPointInput.addEventListener("input", (e) => {
+  pointInputHandler(e.target.value);
+});
 
 function setFormula() {
   document.querySelector("#calcFormulaText").innerHTML = `
@@ -536,8 +547,16 @@ function setFormula() {
   Fibered 200 ${calcSize >= 200 ? "적용" : "미적용"}<br>
   수정 포인트+${(calcUpgrades[0] ? 20 : 0) + (calcUpgrades[1] ? 40 : 0)}%`;
 
-  calcTimeInput.value = calcTime;
-  calcSizeInput.value = calcSize;
-  calcPointInput.value = calcPoint;
+  calcTimeInput.value = Math.floor(calcTime * 10) / 10;
+  calcSizeInput.value = Math.floor(calcSize * 10) / 10;
+  calcPointInput.value = Math.floor(calcPoint * 10) / 10;
+  calcTimeInput.style.width = calcTimeInput.value.length + "ch";
+  calcSizeInput.style.width = calcSizeInput.value.length + "ch";
+  calcPointInput.style.width = calcPointInput.value.length + "ch";
   calcNumberOutput.innerHTML = calcNumber;
 }
+
+document.querySelector("#upgradeList").innerHTML = upgradeData
+  .filter((v) => v.bought)
+  .map((v) => v.description)
+  .join("<br>");

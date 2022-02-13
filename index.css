@@ -201,12 +201,12 @@ input::-webkit-inner-spin-button {
   opacity: 1;
 }
 
-#calcTab.shown {
+.tab-bg.shown {
   visibility: visible;
   opacity: 1;
 }
 
-#calcTab {
+.tab-bg {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -220,20 +220,17 @@ input::-webkit-inner-spin-button {
   transition: all 0.2s;
 }
 
-#calculation {
+.tab {
   position: relative;
   width: 70vw;
   height: 70vh;
   border-radius: 20px;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 60% 40%;
   background-color: var(--colTabBg);
   box-shadow: 0 0 20px 3px var(--colTabBg);
   color: #999;
 }
 
-#calcCloseBtn {
+.tab-close-btn {
   position: absolute;
   font-size: 3em;
   right: 0;
@@ -244,7 +241,13 @@ input::-webkit-inner-spin-button {
   transition: background-color 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-#calcCloseBtn:hover {
+#calcTab {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 60% 40%;
+}
+
+.tab-close-btn:hover {
   background-color: #eee;
   cursor: pointer;
 }
@@ -276,6 +279,7 @@ input::-webkit-inner-spin-button {
   border: 0px;
   height: 2em;
   font-size: 0.6em;
+  min-width: 3em !important;
 
   font-family: "KOHIBaeumOTF";
 }

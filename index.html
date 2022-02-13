@@ -13,10 +13,10 @@
       <div id="menuBtn" class="menu-button">
         <div></div>
       </div>
-      <div id="infoBtn" class="menu-button">
+      <div id="infoBtn" data-tabid="1" class="menu-button">
         <ion-icon name="information-circle-outline"></ion-icon>
       </div>
-      <div id="calcBtn" class="menu-button">
+      <div id="calcBtn" data-tabid="0" class="menu-button">
         <ion-icon name="calculator-outline"></ion-icon>
       </div>
     </div>
@@ -40,9 +40,11 @@
     </template>
     <div id="descriptionContainer"></div>
 
-    <div id="calcTab">
-      <div id="calculation">
-        <div id="calcCloseBtn"><ion-icon name="close-outline"></ion-icon></div>
+    <div id="calcTabBg" data-tabid="0" class="tab-bg">
+      <div id="calcTab" data-tabid="0" class="tab">
+        <div id="calcCloseBtn" data-tabid="0" class="tab-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </div>
         <div id="calcFormula">
           <div id="calcFormulaText">
             Cottened 3000 미적용 ^0.7<br>
@@ -50,17 +52,17 @@
             수정 포인트+0%
           </div>
           <div id="calcTime">
-            <input id="calcTimeInput" class="calc-input" type="number" value="1" min="1" max="99999"></input>
+            <input id="calcTimeInput" class="calc-input" size="1" type="number" value="1" min="1" max="99999"></input>
             <span>t</span>
           </div>
           <ion-icon class="calc-arrow" name="arrow-down-outline"></ion-icon>
           <div id="calcSize">
-            <input id="calcSizeInput" class="calc-input" type="number" value="1" min="1" max="99999"></input>
+            <input id="calcSizeInput" class="calc-input" size="1" type="number" value="1" min="1" max="99999"></input>
             <span>cm³</span>
           </div>
           <ion-icon class="calc-arrow" name="arrow-down-outline"></ion-icon>
           <div id="calcPoint">
-            <input id="calcPointInput" class="calc-input" type="number" value="1" min="1" max="99999"></input>
+            <input id="calcPointInput" class="calc-input" size="1" type="number" value="1" min="1" max="99999"></input>
             <span>수정 포인트</span>
           </div>
           <ion-icon class="calc-arrow" name="arrow-down-outline"></ion-icon> 
@@ -95,6 +97,20 @@
           적용 이후의 값을 20% 감소시킵니다.[기본 소프트캡은 200] 
           예시) 현재 숫자가 400인데, 300부터 적용되는 Fibered에 적용된 경우, 300 + 100*80% = 380이 됩니다.
         </p>
+      </div>
+    </div>
+
+    
+    <div data-tabid="1" class="tab-bg">
+      <div id="infoTab" data-tabid="1" class="tab">
+        <div id="infoCloseBtn" data-tabid="1" class="tab-close-btn">
+          <ion-icon name="close-outline"></ion-icon>
+        </div>
+        *수정<br>
+        수정은 1로 시작해서 일정 시간마다 3n(n은 자란 횟수)만큼 자라고, 수정의 크기는 수정 포인트와 1대1로 대응된 뒤, 소프트캡이 적용됩니다.<br>
+        소프트캡은 이곳의 계산기에서 쉽계 계산할 수 있습니다. 수정 포인트를 정산하면, 수정이 초기화되고, 숫자는 수정 포인트를 100으로 나눈 몫만큼 늘어납니다.
+        <br><br>*현재 가진 능력들<br>
+        <span id="upgradeList"></span>
       </div>
     </div>
 
