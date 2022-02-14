@@ -15,7 +15,7 @@ const upgradeData = [
     name: "자동화 I",
     price: "1MsP",
     description: "1시간마다, 숫자가 1 증가합니다.(베개가 잘 때 제외)",
-    position: { x: "30%", y: "15%" },
+    position: { x: "20%", y: "15%" },
     bought: true,
     color: {
       hueRotate: "-20deg",
@@ -27,7 +27,7 @@ const upgradeData = [
     name: "페일세이프 I",
     price: "1MsP",
     description: "숫자 잘못 세기의 패널티가 2로 줄어듭니다.",
-    position: { x: "50%", y: "15%" },
+    position: { x: "40%", y: "15%" },
     bought: true,
     color: {
       hueRotate: "230deg",
@@ -39,7 +39,7 @@ const upgradeData = [
     name: "고정",
     price: "1MsP",
     description: "로그 채널에서의 원하는 메시지를 고정할 수 있습니다.",
-    position: { x: "70%", y: "15%" },
+    position: { x: "60%", y: "15%" },
     bought: true,
     color: {
       hueRotate: "60deg",
@@ -63,7 +63,7 @@ const upgradeData = [
     name: "자동화 II",
     price: "1MsP",
     description: "매일 아침 11시(등교시 오전 6시)마다, 숫자가 8 증가합니다.",
-    position: { x: "30%", y: "25%" },
+    position: { x: "20%", y: "25%" },
     bought: true,
     color: {
       hueRotate: "-20deg",
@@ -75,7 +75,7 @@ const upgradeData = [
     name: "페일세이프 II",
     price: "1MsP",
     description: "숫자를 잘못 셌을 때, 40% 확률로 패널티가 주어지지 않습니다.",
-    position: { x: "50%", y: "25%" },
+    position: { x: "40%", y: "25%" },
     bought: false,
     color: {
       hueRotate: "230deg",
@@ -88,7 +88,7 @@ const upgradeData = [
     price: "1MsP >=700 -200",
     description:
       "수정을 정산할 때, 수정 크기에 비례하는 확률로 품질 10~50의 계산기를 얻습니다.",
-    position: { x: "70%", y: "25%" },
+    position: { x: "50%", y: "25%" },
     bought: true,
     color: {
       hueRotate: "60deg",
@@ -100,7 +100,7 @@ const upgradeData = [
     name: "업그레이드 I",
     price: "1MsP >=500",
     description: "구매에 일정 시간을 요구하는 업그레이드를 추가합니다.",
-    position: { x: "90%", y: "25%" },
+    position: { x: "60%", y: "25%" },
     bought: true,
     color: {
       hueRotate: "230deg",
@@ -113,7 +113,7 @@ const upgradeData = [
     price: "1MsP -40",
     description:
       "수정의 크기가 커질 때, 10% 확률로 그 때 한정으로 증가량이 3배가 됩니다.",
-    position: { x: "10%", y: "35%" },
+    position: { x: "10%", y: "45%" },
     bought: false,
     color: {
       hueRotate: "40deg",
@@ -137,7 +137,7 @@ const upgradeData = [
     name: "저비용",
     price: "1MsP >=200",
     description: "숫자를 차감하는 업그레이드는 10% 덜 차감하게 됩니다.",
-    position: { x: "70%", y: "35%" },
+    position: { x: "30%", y: "20%" },
     bought: false,
     color: {
       hueRotate: "270deg",
@@ -149,7 +149,7 @@ const upgradeData = [
     name: "석영 I",
     price: "1Msp >=400",
     description: "수정 포인트로 환산되는 양이 20% 증가합니다.",
-    position: { x: "30%", y: "45%" },
+    position: { x: "20%", y: "45%" },
     bought: true,
     color: {
       hueRotate: "270deg",
@@ -161,7 +161,7 @@ const upgradeData = [
     name: "방해석",
     price: "-150",
     description: "수정 크기의 Cottoned 소프트캡이 1500cm³ 미뤄집니다.",
-    position: { x: "50%", y: "35%" },
+    position: { x: "30%", y: "45%" },
     bought: true,
     color: {
       hueRotate: "270deg",
@@ -173,7 +173,7 @@ const upgradeData = [
     name: "석영 II",
     price: "1Msp >=1200",
     description: "수정 포인트로 환산되는 양이 40% 증가합니다.",
-    position: { x: "30%", y: "55%" },
+    position: { x: "20%", y: "55%" },
     bought: false,
     color: {
       hueRotate: "270deg",
@@ -185,7 +185,7 @@ const upgradeData = [
     name: "< Point >",
     price: "1MsP >=800 -50 2h",
     description: `게임 상태를 "티어 1"으로 변경합니다.`,
-    position: { x: "80%", y: "5%" },
+    position: { x: "40%", y: "5%" },
     bought: true,
     color: {
       hueRotate: "170deg",
@@ -197,7 +197,7 @@ const upgradeData = [
     name: "석고",
     price: "-100 48h",
     description: "수정 크기의 Cottoned 소프트캡이 30% 약화됩니다.",
-    position: { x: "10%", y: "55%" },
+    position: { x: "40%", y: "45%" },
     bought: false,
     color: {
       hueRotate: "220deg",
@@ -209,7 +209,7 @@ const upgradeData = [
     name: "업그레이드 II",
     price: "1MsP >=1000 10m",
     description: "구매에 수정 크기를 요구하는 업그레이드를 추가합니다.",
-    position: { x: "90%", y: "35%" },
+    position: { x: "60%", y: "35%" },
     bought: false,
     color: {
       hueRotate: "230deg",
@@ -221,7 +221,7 @@ const upgradeData = [
     name: "알림",
     price: "T1 1MsP",
     description: "로그에 새로운 메시지가 추가되면 멘션이 가는 역할을 만듭니다.",
-    position: { x: "30%", y: "5%" },
+    position: { x: "80%", y: "15%" },
     bought: false,
     color: {
       hueRotate: "290deg",
@@ -233,7 +233,7 @@ const upgradeData = [
     name: "석영 계산기",
     price: "T1 1MsP",
     description: "계산기의 품질은 정산한 수정의 크기에 비례하게 됩니다.",
-    position: { x: "50%", y: "55%" },
+    position: { x: "60%", y: "45%" },
     bought: false,
     color: {
       hueRotate: "100deg",
@@ -246,7 +246,7 @@ const upgradeData = [
     price: "T1 1MsP >=2000",
     description:
       "수정 크기의 하드캡을 없앱니다. 다만, 3000cm³부터 소프트캡들이 적용되기 시작합니다.",
-    position: { x: "10%", y: "45%" },
+    position: { x: "50%", y: "45%" },
     bought: false,
     color: {
       hueRotate: "130deg",
@@ -259,7 +259,7 @@ const upgradeData = [
     price: "T1 1MsP 1m",
     description:
       "어떠한 이유로 관리자가 숫자를 셀 경우, 10% 확률로 숫자를 잘못 셉니다. 이 경우, 잘못 센 대가로 숫자가 5 추가로 증가합니다.",
-    position: { x: "10%", y: "5%" },
+    position: { x: "20%", y: "35%" },
     bought: false,
     color: {
       hueRotate: "120deg",
@@ -271,7 +271,7 @@ const upgradeData = [
     name: "공작석",
     price: "1MsP",
     description: "수정 포인트의 fibered가 50% 약화됩니다.",
-    position: { x: "50%", y: "45%" },
+    position: { x: "30%", y: "55%" },
     bought: false,
     color: {
       hueRotate: "50deg",
@@ -283,7 +283,7 @@ const upgradeData = [
     name: "계산기 제작",
     price: "계산기(품질 40+) 1개",
     description: "숫자를 셀 때 1% 확률로 계산기를 생성합니다.",
-    position: { x: "90%", y: "45%" },
+    position: { x: "45%", y: "35%" },
     bought: true,
     color: {
       hueRotate: "100deg",
@@ -300,19 +300,19 @@ const connectionData = [
   [1, 5],
   [2, 6],
   [4, 9],
-  [5, 10],
+  [5, 10, true],
   [6, 10, true],
   [2, 7],
   [2, 8],
   [2, 11],
-  [5, 11],
+  [1, 11],
   [10, 9],
   [10, 12],
   [10, 13],
   [12, 14],
-  [1, 15],
-  [2, 15],
-  [3, 15],
+  [1, 15, false, "#bbb"],
+  [2, 15, false, "#bbb"],
+  [3, 15, false, "#bbb"],
   [10, 16],
   [8, 17],
   [0, 18],
@@ -405,7 +405,7 @@ function draw() {
     ctx.setLineDash(item[2] ? [10, 10] : []);
     ctx.strokeStyle =
       upgradeData[item[0]].bought && upgradeData[item[1]].bought
-        ? "#888"
+        ? item[3] ?? "#888"
         : "#444";
     ctx.stroke();
 
@@ -432,10 +432,6 @@ function draw() {
           )
     );
     ctx.setLineDash([]);
-    ctx.strokeStyle =
-      upgradeData[item[0]].bought && upgradeData[item[1]].bought
-        ? "#888"
-        : "#444";
     ctx.stroke();
 
     ctx.beginPath();
@@ -454,10 +450,6 @@ function draw() {
               Math.atan2(pos[1].y - pos[0].y, pos[1].x - pos[0].x)
           )
     );
-    ctx.strokeStyle =
-      upgradeData[item[0]].bought && upgradeData[item[1]].bought
-        ? "#888"
-        : "#444";
     ctx.stroke();
   }
 }
