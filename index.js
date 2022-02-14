@@ -284,7 +284,7 @@ const upgradeData = [
     price: "계산기(품질 40+) 1개",
     description: "숫자를 셀 때 1% 확률로 계산기를 생성합니다.",
     position: { x: "90%", y: "45%" },
-    bought: false,
+    bought: true,
     color: {
       hueRotate: "100deg",
       saturate: "10%",
