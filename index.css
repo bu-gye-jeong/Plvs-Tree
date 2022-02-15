@@ -254,7 +254,7 @@ input::-webkit-inner-spin-button {
 
 #calcTab {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 70%;
   grid-template-rows: 60% 40%;
 }
 
@@ -298,15 +298,19 @@ input::-webkit-inner-spin-button {
 
 #calcUpgrades {
   display: grid;
-  grid-template-columns: repeat(3, 33.333%);
+  grid-template-columns: repeat(4, 25%);
   grid-template-rows: 20% 40% 40%;
   margin-top: 1em;
 }
 
 #calcUpgrades > span {
   text-align: center;
-  grid-column: 1/4;
+  grid-column: 1/5;
   font-size: 2em;
+}
+
+#calcUpgrades > div {
+  margin: 0.2em;
 }
 
 .calc-upgrade {

@@ -87,7 +87,7 @@ const upgradeData = [
     name: "아이템화",
     price: "1MsP >=700 -200",
     description:
-      "수정을 정산할 때, 수정 크기에 비례하는 확률로 품질 10~50의 계산기를 얻습니다.",
+      "수정을 정산할 때, 수정 크기에 비례하는 확률로 계산기를 얻습니다.",
     position: { x: "50%", y: "25%" },
     bought: true,
     color: {
@@ -347,11 +347,23 @@ const upgradeData = [
     price: "수정 -150cm³ 3h",
     description: "수정이 더 빨리 자랍니다. (+3 -> +3.5)",
     position: { x: "70%", y: "55%" },
-    bought: false,
+    bought: true,
     color: {
       hueRotate: "0deg",
       saturate: "20%",
       brightness: "100%",
+    },
+  },
+  {
+    name: "흑운모",
+    price: "1MsP",
+    description: "수정 포인트의 Fibered 소프트캡이 800cm³ 미뤄집니다.",
+    position: { x: "70%", y: "65%" },
+    bought: false,
+    color: {
+      hueRotate: "0deg",
+      saturate: "10%",
+      brightness: "30%",
     },
   },
 ];
@@ -393,6 +405,7 @@ const connectionData = [
   [12, 26],
   [23, 27],
   [10, 28],
+  [28, 29],
 ];
 
 // render Upgrades
@@ -615,7 +628,7 @@ const calcCottened = {
 };
 const calcFibered = {
   from() {
-    return 200;
+    return calcUpgrades[6] ? 1000 : 200;
   },
   apply(v) {
     return v >= calcFibered.from()
@@ -636,7 +649,7 @@ const calcFibered = {
 const timeInputHandler = (v) => {
   lastUsedCalc = 0;
   calcTime = +v;
-  calcSize = (3 * (calcTime - 1) * calcTime) / 2 + 1;
+  calcSize = ((calcUpgrades[5] ? 3.5 : 3) * (calcTime - 1) * calcTime) / 2 + 1;
   calcPoint = Math.floor(
     calcCottened.apply(
       calcFibered.apply(
@@ -652,7 +665,11 @@ const timeInputHandler = (v) => {
 const sizeInputHandler = (v) => {
   lastUsedCalc = 1;
   calcSize = +v;
-  calcTime = Math.sqrt(3 * (8 * calcSize - 5)) / 6 + 1 / 2;
+  calcTime =
+    (calcUpgrades[5]
+      ? Math.sqrt(7 * (16 * calcSize - 9)) / 14
+      : Math.sqrt(3 * (8 * calcSize - 5)) / 6) +
+    1 / 2;
   calcPoint = Math.floor(
     calcCottened.apply(
       calcFibered.apply(
@@ -690,7 +707,7 @@ function setFormula() {
   document.querySelector("#calcFormulaText").innerHTML = `
   수정 포인트+${
     calcUpgrades[0] ? (calcUpgrades[1] ? 68 : 20) : calcUpgrades[1] ? 40 : 0
-  }%<br>Fibered 200
+  }%<br>Fibered ${calcFibered.from()} 
   ${calcSize >= 200 ? "적용" : "미적용"}
   *${calcUpgrades[4] ? 90 : 80}%<br>
   Cottened ${calcCottened.from()} 
