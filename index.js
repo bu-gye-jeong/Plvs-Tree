@@ -113,7 +113,7 @@ const upgradeData = [
     price: "1MsP -40",
     description:
       "수정의 크기가 커질 때, 10% 확률로 그 때 한정으로 증가량이 3배가 됩니다.",
-    position: { x: "10%", y: "45%" },
+    position: { x: "10%", y: "55%" },
     bought: false,
     color: {
       hueRotate: "40deg",
@@ -125,7 +125,7 @@ const upgradeData = [
     name: "결정화",
     price: "1MsP >=200",
     description: "수정 포인트를 해금합니다.",
-    position: { x: "30%", y: "35%" },
+    position: { x: "30%", y: "45%" },
     bought: true,
     color: {
       hueRotate: "180deg",
@@ -137,7 +137,7 @@ const upgradeData = [
     name: "저비용",
     price: "1MsP >=200",
     description: "숫자를 차감하는 업그레이드는 10% 덜 차감하게 됩니다.",
-    position: { x: "30%", y: "20%" },
+    position: { x: "30%", y: "25%" },
     bought: false,
     color: {
       hueRotate: "270deg",
@@ -149,7 +149,7 @@ const upgradeData = [
     name: "석영 I",
     price: "1Msp >=400",
     description: "수정 포인트로 환산되는 양이 20% 증가합니다.",
-    position: { x: "20%", y: "45%" },
+    position: { x: "20%", y: "55%" },
     bought: true,
     color: {
       hueRotate: "270deg",
@@ -161,7 +161,7 @@ const upgradeData = [
     name: "방해석",
     price: "-150",
     description: "수정 크기의 Cottoned 소프트캡이 1500cm³ 미뤄집니다.",
-    position: { x: "30%", y: "45%" },
+    position: { x: "30%", y: "55%" },
     bought: true,
     color: {
       hueRotate: "270deg",
@@ -173,7 +173,7 @@ const upgradeData = [
     name: "석영 II",
     price: "1Msp >=1200",
     description: "수정 포인트로 환산되는 양이 40% 증가합니다.",
-    position: { x: "20%", y: "55%" },
+    position: { x: "20%", y: "65%" },
     bought: false,
     color: {
       hueRotate: "270deg",
@@ -197,7 +197,7 @@ const upgradeData = [
     name: "석고",
     price: "-100 48h",
     description: "수정 크기의 Cottoned 소프트캡이 30% 약화됩니다.",
-    position: { x: "40%", y: "45%" },
+    position: { x: "40%", y: "55%" },
     bought: false,
     color: {
       hueRotate: "220deg",
@@ -210,7 +210,7 @@ const upgradeData = [
     price: "1MsP >=1000 10m",
     description: "구매에 수정 크기를 요구하는 업그레이드를 추가합니다.",
     position: { x: "60%", y: "35%" },
-    bought: false,
+    bought: true,
     color: {
       hueRotate: "230deg",
       saturate: "50%",
@@ -233,7 +233,7 @@ const upgradeData = [
     name: "석영 계산기",
     price: "T1 1MsP",
     description: "계산기의 품질은 정산한 수정의 크기에 비례하게 됩니다.",
-    position: { x: "60%", y: "45%" },
+    position: { x: "60%", y: "55%" },
     bought: false,
     color: {
       hueRotate: "100deg",
@@ -246,7 +246,7 @@ const upgradeData = [
     price: "T1 1MsP >=2000",
     description:
       "수정 크기의 하드캡을 없앱니다. 다만, 3000cm³부터 소프트캡들이 적용되기 시작합니다.",
-    position: { x: "50%", y: "45%" },
+    position: { x: "50%", y: "55%" },
     bought: false,
     color: {
       hueRotate: "130deg",
@@ -259,7 +259,7 @@ const upgradeData = [
     price: "T1 1MsP 1m",
     description:
       "어떠한 이유로 관리자가 숫자를 셀 경우, 10% 확률로 숫자를 잘못 셉니다. 이 경우, 잘못 센 대가로 숫자가 5 추가로 증가합니다.",
-    position: { x: "20%", y: "35%" },
+    position: { x: "20%", y: "45%" },
     bought: false,
     color: {
       hueRotate: "120deg",
@@ -271,7 +271,7 @@ const upgradeData = [
     name: "공작석",
     price: "1MsP",
     description: "수정 포인트의 fibered가 50% 약화됩니다.",
-    position: { x: "30%", y: "55%" },
+    position: { x: "30%", y: "65%" },
     bought: false,
     color: {
       hueRotate: "50deg",
@@ -283,12 +283,75 @@ const upgradeData = [
     name: "계산기 제작",
     price: "계산기(품질 40+) 1개",
     description: "숫자를 셀 때 1% 확률로 계산기를 생성합니다.",
-    position: { x: "45%", y: "35%" },
+    position: { x: "50%", y: "35%" },
     bought: true,
     color: {
       hueRotate: "100deg",
       saturate: "10%",
       brightness: "300%",
+    },
+  },
+  {
+    name: "업그레이드 III",
+    price: "1MsP -400 30m<br>수정 5000cm³이상",
+    description: "구매에 다수의 동의를 요구하는 업그레이드를 추가합니다.",
+    position: { x: "60%", y: "45%" },
+    bought: false,
+    color: {
+      hueRotate: "230deg",
+      saturate: "50%",
+      brightness: "150%",
+    },
+  },
+  {
+    name: "자동화 III",
+    price: "1MsP 수정 -3200cm³",
+    description:
+      "자동화 I, 자동화 II의 효과를 대체합니다. 오전/오후 6시, 12시마다 숫자가 10 증가합니다.",
+    position: { x: "20%", y: "35%" },
+    bought: false,
+    color: {
+      hueRotate: "-20deg",
+      saturate: "30%",
+      brightness: "250%",
+    },
+  },
+  {
+    name: "황철석",
+    price: "1MsP 수정 -2500cm³",
+    description:
+      "숫자에 비례해서, 수정 포인트 환산량이 증가합니다. (2.15 오후 2시 기준 1.4배)",
+    position: { x: "10%", y: "65%" },
+    bought: false,
+    color: {
+      hueRotate: "-40deg",
+      saturate: "50%",
+      brightness: "250%",
+    },
+  },
+  {
+    name: "계산기 파괴",
+    price: "계산기 4개<br>수정 8000cm³ 이상",
+    description:
+      "사용하지 않은 계산기는 파괴할 수 있게 됩니다. 파괴한 계산기의 품질만큼의 숫자를 더합니다.",
+    position: { x: "50%", y: "45%" },
+    bought: false,
+    color: {
+      hueRotate: "240deg",
+      saturate: "50%",
+      brightness: "300%",
+    },
+  },
+  {
+    name: "휘석",
+    price: "수정 -150cm³ 3h",
+    description: "수정이 더 빨리 자랍니다. (+3 -> +3.5)",
+    position: { x: "70%", y: "55%" },
+    bought: false,
+    color: {
+      hueRotate: "0deg",
+      saturate: "20%",
+      brightness: "100%",
     },
   },
 ];
@@ -302,6 +365,7 @@ const connectionData = [
   [4, 9],
   [5, 10, true],
   [6, 10, true],
+  [10, 7],
   [2, 7],
   [2, 8],
   [2, 11],
@@ -324,6 +388,11 @@ const connectionData = [
   [4, 21],
   [13, 22],
   [7, 23],
+  [17, 24],
+  [5, 25],
+  [12, 26],
+  [23, 27],
+  [10, 28],
 ];
 
 // render Upgrades
