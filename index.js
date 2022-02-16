@@ -196,7 +196,7 @@ const upgradeData = [
   {
     name: "석고",
     price: "-100 48h",
-    description: "수정 크기의 Cottoned 소프트캡이 30% 약화됩니다.",
+    description: "수정 포인트의 Cottoned 소프트캡이 30% 약화됩니다.",
     position: { x: "40%", y: "55%" },
     bought: false,
     color: {
@@ -371,7 +371,7 @@ const upgradeData = [
     price: "1MsP 수정 6000cm³ 이상",
     description: "수정 크기의 Fibered 소프트캡이 2000cm³ 미뤄집니다.",
     position: { x: "50%", y: "65%" },
-    bought: true,
+    bought: false,
     color: {
       hueRotate: "150deg",
       saturate: "100%",
