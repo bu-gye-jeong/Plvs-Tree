@@ -160,7 +160,7 @@ const upgradeData = [
   {
     name: "방해석",
     price: "-150",
-    description: "수정 크기의 Cottoned 소프트캡이 1500cm³ 미뤄집니다.",
+    description: "수정 포인트의 Cottoned 소프트캡이 1500cm³ 미뤄집니다.",
     position: { x: "30%", y: "55%" },
     bought: true,
     color: {
@@ -245,9 +245,9 @@ const upgradeData = [
     name: "활석",
     price: "T1 1MsP >=2000",
     description:
-      "수정 크기의 하드캡을 없앱니다. 다만, 3000cm³부터 소프트캡들이 적용되기 시작합니다.",
+      "수정 크기의 하드캡을 없앱니다. 다만, 3000cm³부터 크기 소프트캡들이 적용되기 시작합니다.",
     position: { x: "50%", y: "55%" },
-    bought: false,
+    bought: true,
     color: {
       hueRotate: "130deg",
       saturate: "20%",
@@ -366,6 +366,18 @@ const upgradeData = [
       brightness: "30%",
     },
   },
+  {
+    name: "형석",
+    price: "1MsP 수정 6000cm³ 이상",
+    description: "수정 크기의 Fibered 소프트캡이 2000cm³ 미뤄집니다.",
+    position: { x: "50%", y: "65%" },
+    bought: true,
+    color: {
+      hueRotate: "150deg",
+      saturate: "100%",
+      brightness: "250%",
+    },
+  },
 ];
 const connectionData = [
   [0, 1],
@@ -406,6 +418,7 @@ const connectionData = [
   [23, 27],
   [10, 28],
   [28, 29],
+  [20, 30],
 ];
 
 // render Upgrades
