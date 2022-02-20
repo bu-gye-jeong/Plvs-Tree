@@ -38,7 +38,7 @@
 body {
   background-color: var(--colBg);
   font-family: "KOHIBaeumOTF";
-  overflow: hidden;
+  overflow: auto hidden;
 }
 
 input:focus {
@@ -51,8 +51,21 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-#menu {
+*::-webkit-scrollbar {
+  background-color: var(--colTabBg);
   position: absolute;
+  width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+#menu {
+  position: fixed;
   right: 20px;
   bottom: 20px;
   background-color: var(--colMenu);
@@ -131,6 +144,19 @@ input::-webkit-inner-spin-button {
   background-color: var(--colMenuBtn);
 }
 
+#upgradeContainer {
+  position: absolute;
+  width: 100vw;
+  min-width: 1800px;
+}
+
+#descriptionContainer {
+  position: absolute;
+  visibility: hidden;
+  width: 100vw;
+  min-width: 1800px;
+}
+
 .upgrade:not(.bought) {
   filter: grayscale(1);
 }
@@ -183,11 +209,6 @@ input::-webkit-inner-spin-button {
   white-space: nowrap;
 }
 
-#connectionCanvas {
-  width: 100%;
-  height: 100%;
-}
-
 .description {
   visibility: hidden;
   opacity: 0;
@@ -222,8 +243,9 @@ input::-webkit-inner-spin-button {
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  min-width: 1800px;
+  width: 100%;
+  height: 100%;
   backdrop-filter: blur(7px);
   background-color: #6664;
   display: flex;
@@ -342,17 +364,4 @@ input::-webkit-inner-spin-button {
 #infoTab {
   padding: 0.5em;
   overflow-y: scroll;
-}
-
-#infoTab::-webkit-scrollbar {
-  position: absolute;
-  width: 10px;
-}
-#infoTab::-webkit-scrollbar-thumb {
-  background-color: grey;
-  border-radius: 10px;
-}
-#infoTab::-webkit-scrollbar-track {
-  background-color: var(--colTabBg);
-  border-radius: 10px;
 }

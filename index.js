@@ -1,6 +1,17 @@
 const upgradeData = treeData.upgrades;
 const connectionData = treeData.connections;
 
+const appHeight = () => {
+  const eles = [
+    document.querySelector("#upgradeContainer"),
+    document.querySelector("#descriptionContainer"),
+    document.querySelector(".tab-bg"),
+  ];
+  eles.forEach((e) => e.style.setProperty("height", `${window.innerHeight}px`));
+};
+window.addEventListener("resize", appHeight);
+appHeight();
+
 // render Upgrades
 const upgradeContainer = document.querySelector("#upgradeContainer");
 const upgradeElement = document.querySelector("#upgrade").innerHTML;
@@ -61,7 +72,7 @@ setInterval(draw, 100);
 function draw() {
   const canvas = document.getElementById("connectionCanvas");
   var ctx = canvas.getContext("2d");
-  ctx.canvas.width = window.innerWidth;
+  ctx.canvas.width = Math.max(1800, window.innerWidth);
   ctx.canvas.height = window.innerHeight;
 
   ctx.lineWidth = 5;
@@ -70,7 +81,7 @@ function draw() {
       if (i >= 2) return;
       let percentPos = upgradeData[v].position;
       return {
-        x: percentToWidthPx(percentPos.x),
+        x: percentToWidthPx(percentPos.x, 1800),
         y: percentToHeightPx(percentPos.y),
       };
     });
@@ -133,8 +144,11 @@ function draw() {
 function percentToHeightPx(p) {
   return Math.floor((window.innerHeight * +p.substring(0, p.length - 1)) / 100);
 }
-function percentToWidthPx(p) {
-  return Math.floor((window.innerWidth * +p.substring(0, p.length - 1)) / 100);
+function percentToWidthPx(p, minWidth = 0) {
+  return Math.floor(
+    (Math.max(window.innerWidth, minWidth) * +p.substring(0, p.length - 1)) /
+      100
+  );
 }
 
 const menuBtn = document.querySelector("#menuBtn");
