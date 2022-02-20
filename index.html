@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="index.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" />
     <title>Pillowverse Upgrade Tree</title>
   </head>
 
@@ -23,7 +23,9 @@
 
     <template id="upgrade">
       <div class="upgrade bought" style="left: 0%; top: 1%; filter: filters">
-        <div class="upgrade-name">{upgradeName}</div>
+        <div class="upgrade-name" style="letter-spacing: 0px">
+          {upgradeName}
+        </div>
         <span class="upgrade-price">{upgradePrice}</span>
       </div>
     </template>
@@ -47,25 +49,43 @@
         </div>
         <div id="calcFormula">
           <div id="calcFormulaText">
-            수정 포인트+0%<br>
-            Fibered 200 미적용 *80%<br>
+            수정 포인트+0%<br />
+            Fibered 200 미적용 *80%<br />
             Cottened 3000 미적용 ^0.7
           </div>
           <div id="calcTime">
-            <input id="calcTimeInput" class="calc-input" size="1" type="number" value="1"></input>
+            <input
+              id="calcTimeInput"
+              class="calc-input"
+              size="1"
+              type="number"
+              value="1"
+            />
             <span>t</span>
           </div>
           <ion-icon class="calc-arrow" name="arrow-down-outline"></ion-icon>
           <div id="calcSize">
-            <input id="calcSizeInput" class="calc-input" size="1" type="number" value="1"></input>
+            <input
+              id="calcSizeInput"
+              class="calc-input"
+              size="1"
+              type="number"
+              value="1"
+            />
             <span>cm³</span>
           </div>
           <ion-icon class="calc-arrow" name="arrow-down-outline"></ion-icon>
           <div id="calcPoint">
-            <input id="calcPointInput" class="calc-input" size="1" type="number" value="1"></input>
+            <input
+              id="calcPointInput"
+              class="calc-input"
+              size="1"
+              type="number"
+              value="1"
+            />
             <span>수정 포인트</span>
           </div>
-          <ion-icon class="calc-arrow" name="arrow-down-outline"></ion-icon> 
+          <ion-icon class="calc-arrow" name="arrow-down-outline"></ion-icon>
           <div id="calcNumber">
             <span>+</span><span id="calcOutput">1</span>
           </div>
@@ -102,41 +122,52 @@
           </div>
         </div>
         <p>
-          * Cottoned 소프트캡<br>
-          적용 이후의 값에 ^0.7 승수를 적용합니다.[기본 소프트캡은 3000] 
-          예시) 현재 숫자가 8000인데, 2000부터 적용되는 Cottoned의 영향을 받은 경우 2000 + 6000^0.7 = 2441이 됩니다.
-          <br><br>
-          * Fibered 소프트캡<br>
-          적용 이후의 값을 20% 감소시킵니다.[기본 소프트캡은 200] 
-          예시) 현재 숫자가 400인데, 300부터 적용되는 Fibered에 적용된 경우, 300 + 100*80% = 380이 됩니다.
-          <br><br>
+          * Cottoned 소프트캡<br />
+          적용 이후의 값에 ^0.7 승수를 적용합니다.[기본 소프트캡은 3000] 예시)
+          현재 숫자가 8000인데, 2000부터 적용되는 Cottoned의 영향을 받은 경우
+          2000 + 6000^0.7 = 2441이 됩니다.
+          <br /><br />
+          * Fibered 소프트캡<br />
+          적용 이후의 값을 20% 감소시킵니다.[기본 소프트캡은 200] 예시) 현재
+          숫자가 400인데, 300부터 적용되는 Fibered에 적용된 경우, 300 + 100*80%
+          = 380이 됩니다.
+          <br /><br />
           * 실시간으로 반영되는 황철석은 제외하였습니다.
         </p>
       </div>
     </div>
 
-    
     <div data-tabid="1" class="tab-bg">
       <div id="infoTab" data-tabid="1" class="tab">
         <div id="infoCloseBtn" data-tabid="1" class="tab-close-btn">
           <ion-icon name="close-outline"></ion-icon>
         </div>
-        *수정<br>
-        수정은 1로 시작해서 15분마다 3n(n은 자란 횟수)만큼 자라고, 수정의 크기는 수정 포인트와 1대1로 대응된 뒤, 소프트캡이 적용됩니다.<br>
-        소프트캡은 이곳의 계산기에서 쉽계 계산할 수 있습니다. 수정 포인트를 정산하면, 수정이 초기화되고, 숫자는 수정 포인트를 100으로 나눈 몫만큼 늘어납니다.
-        <br><br>*현재 가진 능력들<br>
-        <span id="upgradeList"></span><br><br>
-        *소요시간<br>
-        업그레이드를 구매할 때, 소요 시간 조건이 존재한다면 그 시간동안 다른 업그레이드를 사지 못하고 기다려야 합니다.
-        <br><br>*계산기<br>
-        다양한 방법으로 얻을 수 있습니다. 옵션 한 가지를 가지고 있으며, 이 옵션은 품질에 의해 성능이 결정됩니다.
-        품질은 기본 10~50 중 무작위로 결정됩니다. 한 번 사용할 시 망가지기 전까지 해제할 수 없고, 여러 계산기를 한 번에 사용할 수 없습니다.
+        *수정<br />
+        수정은 1로 시작해서 15분마다 3n(n은 자란 횟수)만큼 자라고, 수정의 크기는
+        수정 포인트와 1대1로 대응된 뒤, 소프트캡이 적용됩니다.<br />
+        소프트캡은 이곳의 계산기에서 쉽계 계산할 수 있습니다. 수정 포인트를
+        정산하면, 수정이 초기화되고, 숫자는 수정 포인트를 100으로 나눈 몫만큼
+        늘어납니다.
+        <br /><br />*현재 가진 능력들<br />
+        <span id="upgradeList"></span><br /><br />
+        *소요시간<br />
+        업그레이드를 구매할 때, 소요 시간 조건이 존재한다면 그 시간동안 다른
+        업그레이드를 사지 못하고 기다려야 합니다.
+        <br /><br />*계산기<br />
+        다양한 방법으로 얻을 수 있습니다. 옵션 한 가지를 가지고 있으며, 이
+        옵션은 품질에 의해 성능이 결정됩니다. 품질은 기본 10~50 중 무작위로
+        결정됩니다. 한 번 사용할 시 망가지기 전까지 해제할 수 없고, 여러
+        계산기를 한 번에 사용할 수 없습니다.
+        <br /><br />*계산기 과부하<br />
+        - 어떤 이유로, 계산기가 정해진 품질 최댓값을 넘어서는 품질로 등장한
+        경우, 과부하됩니다.<br />
+        - 과부하가 걸린 계산기는 내구도가 상당히 줄어듭니다.
       </div>
     </div>
 
     <canvas id="connectionCanvas"></canvas>
 
-    
+    <script src="data.js"></script>
     <script src="index.js"></script>
     <script
       type="module"

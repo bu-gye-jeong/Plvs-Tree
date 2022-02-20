@@ -62,6 +62,7 @@ input::-webkit-inner-spin-button {
   border-radius: 35px;
   z-index: 999999;
   transition: all 0.15s;
+  overflow: hidden;
 }
 
 #menu.opened {
@@ -244,6 +245,7 @@ input::-webkit-inner-spin-button {
 .tab-close-btn {
   position: absolute;
   font-size: 3em;
+  top: 0;
   right: 0;
   width: 1em;
   height: 1em;
@@ -335,4 +337,22 @@ input::-webkit-inner-spin-button {
 .calc-upgrade.activated:hover {
   cursor: pointer;
   background-color: #777;
+}
+
+#infoTab {
+  padding: 0.5em;
+  overflow-y: scroll;
+}
+
+#infoTab::-webkit-scrollbar {
+  position: absolute;
+  width: 10px;
+}
+#infoTab::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+}
+#infoTab::-webkit-scrollbar-track {
+  background-color: var(--colTabBg);
+  border-radius: 10px;
 }
