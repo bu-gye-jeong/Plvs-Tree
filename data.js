@@ -445,6 +445,19 @@ const treeData = {
         brightness: "80%",
       },
     },
+    {
+      name: "계산기 폭파",
+      price: "계산기 5개",
+      description:
+        "사용 중인 계산기를 파괴할 수 있게 됩니다. 이 방식으로 파괴된 계산기의 효과는 적용되지 않습니다.",
+      position: { x: "40%", y: "45%" },
+      bought: false,
+      color: {
+        hueRotate: "230deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
   ],
   connections: [
     [0, 1],
@@ -491,5 +504,6 @@ const treeData = {
     [24, 34],
     [24, 35],
     [33, 35],
+    [23, 36],
   ],
 };
