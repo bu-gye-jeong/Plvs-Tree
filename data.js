@@ -475,7 +475,7 @@ const treeData = {
       price: "\'베개\' 계산기 1개<br>수정 >=15000cm³",
       description:
         "보석과 관련된 계산기 옵션 5종류를 추가합니다.",
-      position: { x: "20%", y: "75%" },
+      position: { x: "10%", y: "65%" },
       bought: true,
       color: {
         hueRotate: "0deg",
@@ -488,7 +488,7 @@ const treeData = {
       price: "1MsP",
       description:
         "계산기가 고장날 때, 아주 낮은 확률로 절반의 품질을 가진 계산기를 얻습니다.",
-      position: { x: "30%", y: "75%" },
+      position: { x: "60%", y: "65%" },
       bought: false,
       color: {
         hueRotate: "0deg",
@@ -660,13 +660,13 @@ const treeData = {
     [24, 35, false, "#bbb"],
     [33, 35, false, "#bbb"],
     [23, 36],
-    [10, 37],
-    [10, 38],
+    [9, 37],
+    [9, 38],
     [16, 38, true],
     [20, 38],
     [33, 38],
     [7, 39],
-    [10, 39],
+    [9, 39],
     [13, 40],
     [29, 40, true],
     [25, 41],
