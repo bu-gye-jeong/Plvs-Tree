@@ -116,7 +116,7 @@ const treeData = {
       description:
         "수정의 크기가 커질 때, 10% 확률로 그 때 한정으로 증가량이 3배가 됩니다.",
       position: { x: "10%", y: "55%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "40deg",
         saturate: "100%",
@@ -136,7 +136,7 @@ const treeData = {
       },
     },
     {
-      name: "저비용",
+      name: "저비용 I",
       price: "1MsP >=200",
       description: "숫자를 차감하는 업그레이드는 10% 덜 차감하게 됩니다.",
       position: { x: "30%", y: "25%" },
@@ -151,7 +151,7 @@ const treeData = {
       name: "석영 I",
       price: "1Msp >=400",
       description: "수정 포인트로 환산되는 양이 20% 증가합니다.",
-      position: { x: "20%", y: "55%" },
+      position: { x: "20%", y: "65%" },
       bought: true,
       color: {
         hueRotate: "270deg",
@@ -163,7 +163,7 @@ const treeData = {
       name: "방해석",
       price: "-150",
       description: "수정 포인트의 Cottoned 소프트캡이 1500cm³ 미뤄집니다.",
-      position: { x: "30%", y: "55%" },
+      position: { x: "40%", y: "65%" },
       bought: true,
       color: {
         hueRotate: "270deg",
@@ -173,10 +173,10 @@ const treeData = {
     },
     {
       name: "석영 II",
-      price: "1Msp >=1200",
+      price: "1MsP >=1200",
       description: "수정 포인트로 환산되는 양이 40% 증가합니다.",
-      position: { x: "20%", y: "65%" },
-      bought: false,
+      position: { x: "30%", y: "75%" },
+      bought: true,
       color: {
         hueRotate: "270deg",
         saturate: "10%",
@@ -262,7 +262,7 @@ const treeData = {
       price: "T1 1MsP 1m",
       description:
         "어떠한 이유로 관리자가 숫자를 셀 경우, 10% 확률로 숫자를 잘못 셉니다. 이 경우, 잘못 센 대가로 숫자가 5 추가로 증가합니다.",
-      position: { x: "20%", y: "45%" },
+      position: { x: "30%", y: "35%" },
       bought: false,
       color: {
         hueRotate: "120deg",
@@ -274,8 +274,8 @@ const treeData = {
       name: "공작석",
       price: "1MsP",
       description: "수정 포인트의 fibered가 50% 약화됩니다.",
-      position: { x: "30%", y: "65%" },
-      bought: false,
+      position: { x: "40%", y: "75%" },
+      bought: true,
       color: {
         hueRotate: "50deg",
         saturate: "100%",
@@ -296,7 +296,7 @@ const treeData = {
     },
     {
       name: "업그레이드 III",
-      price: "1MsP -400 30m<br>수정 5000cm³이상",
+      price: "1MsP -400 30m<br>수정 >=5000cm³",
       description: "구매에 다수의 동의를 요구하는 업그레이드를 추가합니다.",
       position: { x: "80%", y: "25%" },
       bought: true,
@@ -312,7 +312,7 @@ const treeData = {
       description:
         "자동화 I, 자동화 II의 효과를 대체합니다. 오전/오후 6시, 12시마다 숫자가 10 증가합니다.",
       position: { x: "20%", y: "35%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "-20deg",
         saturate: "30%",
@@ -324,7 +324,7 @@ const treeData = {
       price: "1MsP 수정 -2500cm³",
       description:
         "숫자에 비례해서, 수정 포인트 환산량이 증가합니다. (2.15 오후 2시 기준 1.4배)",
-      position: { x: "10%", y: "65%" },
+      position: { x: "20%", y: "75%" },
       bought: false,
       color: {
         hueRotate: "-40deg",
@@ -334,7 +334,7 @@ const treeData = {
     },
     {
       name: "계산기 파괴",
-      price: "계산기 4개<br>수정 8000cm³ 이상",
+      price: "계산기 4개<br>수정 >=8000cm³",
       description:
         "사용하지 않은 계산기는 파괴할 수 있게 됩니다. 파괴한 계산기의 품질만큼의 숫자를 더합니다.",
       position: { x: "50%", y: "45%" },
@@ -371,7 +371,7 @@ const treeData = {
     },
     {
       name: "형석",
-      price: "1MsP 수정 6000cm³ 이상",
+      price: "1MsP 수정 >=6000cm³",
       description: "수정 크기의 Fibered 소프트캡이 2000cm³ 미뤄집니다.",
       position: { x: "50%", y: "65%" },
       bought: false,
@@ -409,13 +409,12 @@ const treeData = {
     },
     {
       name: "베개산기",
-      price: "-200 계산기 1개<br>수정 최고 12222cm³+",
+      price: "-200 계산기 1개<br>수정 >=12222cm³",
       description:
         "베개와 관련된 계산기 옵션 4개를 해금합니다. 모두 직접적인 수 증가와 관련되어 있습니다.",
       position: { x: "60%", y: "45%" },
       bought: true,
-      color: {
-        hueRotate: "-30deg",
+      color: {hueRotate: "-30deg",
         saturate: "100%",
         brightness: "200%",
       },
@@ -436,9 +435,9 @@ const treeData = {
       name: "< Line >",
       price: "설명 참조",
       description:
-        '게임 상태를 "티어 2"으로 변경합니다.<br>해금법 : 1 MsP->7인 이상 동의->2시간 소요->숫자 -1200->30분 소요->숫자 5000+->계산기 2개 소모->수정 크기 -15000cm³->10분 소요',
-      position: { x: "80%", y: "55%" },
-      bought: false,
+        "게임 상태를 \'티어 2\'으로 변경합니다.<br>해금법 : 1MsP->7인 이상 동의->2시간 소요->숫자 -1200->30분 소요->숫자 >=5000->계산기 2개 소모->수정 -15000cm³->10분 소요",
+      position: { x: "90%", y: "55%" },
+      bought: true,
       color: {
         hueRotate: "170deg",
         saturate: "100%",
@@ -454,6 +453,162 @@ const treeData = {
       bought: false,
       color: {
         hueRotate: "230deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "낮은 마일스톤",
+      price: "-200 1s",
+      description:
+        "마일스톤 요구량이 30% 감소됩니다.",
+      position: { x: "10%", y: "75%" },
+      bought: true,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "보석 계산기",
+      price: "\'베개\' 계산기 1개<br>수정 >=15000cm³",
+      description:
+        "보석과 관련된 계산기 옵션 5종류를 추가합니다.",
+      position: { x: "20%", y: "75%" },
+      bought: true,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "계산적 행운",
+      price: "1MsP",
+      description:
+        "계산기가 고장날 때, 아주 낮은 확률로 절반의 품질을 가진 계산기를 얻습니다.",
+      position: { x: "30%", y: "75%" },
+      bought: false,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "청금석",
+      price: "1MsP",
+      description:
+        "수정 포인트의 Fibered가 정지됩니다.",
+      position: { x: "50%", y: "75%" },
+      bought: false,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "자동화 IV",
+      price: "설명 참조",
+      description:
+        "자동화 III의 효과를 대체합니다. 매일 정오마다 숫자가 80 증가합니다.<br>해금법 : 1MsP->9인 이상 동의->9시간 소요",
+      position: { x: "20%", y: "45%" },
+      bought: true,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "자동화 V",
+      price: "설명 참조",
+      description:
+        "자동화 IV의 효과를 대체합니다. 매일 정오마다 숫자가 200 증가합니다.<br>해금법 : 1MsP->숫자 -1500->숫자 >=15000",
+      position: { x: "20%", y: "55%" },
+      bought: false,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "빈 버튼",
+      price: "1MsP 10h",
+      description:
+        "앞으로 얻는 계산기는 버튼 슬롯이 추가됩니다.",
+      position: { x: "30%", y: "35%" },
+      bought: true,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      }
+    },
+    {
+      name: "석영 III",
+      price: "1MsP >=3000",
+      description:
+        "석영 I, 석영 II의 효과를 대체합니다. 수정 포인트로 환산되는 양이 100% 증가합니다.",
+      position: { x: "30%", y: "85%" },
+      bought: false,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "베뮤니티 업그레이드",
+      price: "T2 설명 참조",
+      description:
+        "베뮤니티와 관련된 업그레이드를 추가합니다.<br>해금법 : 4시간 동안 채팅 쿨타임 1시간->8시간 동안 수정 성장률 -99%",
+      position: { x: "90%", y: "35%" },
+      bought: false,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "스토리지 I",
+      price: "T2 설명 참조",
+      description:
+        "계산기를 1개 더 보관할 수 있게 됩니다.<br>해금법 : 30% 확률로 숫자 -25(10회 반복)->숫자 >=5000->1분 소요",
+      position: { x: "70%", y: "35%" },
+      bought: true,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "토파즈 I",
+      price: "T2 -100 10m",
+      description:
+        "수정 크기의 Cottoned 소프트캡이 33% 약화됩니다.",
+      position: { x: "80%", y: "55%" },
+      bought: false,
+      color: {
+        hueRotate: "0deg",
+        saturate: "150%",
+        brightness: "80%",
+      },
+    },
+    {
+      name: "스토리지 II",
+      price: "-200 1s",
+      description:
+        "계산기를 1개 더 보관할 수 있게 됩니다.<br>해금법 : 5% 확률로 숫자 -250(10회 반복)->숫자 >=6000->1분 소요",
+      position: { x: "70%", y: "45%" },
+      bought: false,
+      color: {
+        hueRotate: "0deg",
         saturate: "150%",
         brightness: "80%",
       },
@@ -502,8 +657,25 @@ const treeData = {
     [7, 32],
     [32, 33],
     [24, 34],
-    [24, 35],
-    [33, 35],
+    [24, 35, false, "#bbb"],
+    [33, 35, false, "#bbb"],
     [23, 36],
+    [10, 37],
+    [10, 38],
+    [16, 38, true],
+    [20, 38],
+    [33, 38],
+    [7, 39],
+    [10, 39],
+    [13, 40],
+    [29, 40, true],
+    [25, 41],
+    [41, 42],
+    [7, 43],
+    [14, 44],
+    [24, 45],
+    [7, 46],
+    [10, 47],
+    [46, 48],
   ],
 };
