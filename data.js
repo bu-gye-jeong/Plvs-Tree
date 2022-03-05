@@ -151,7 +151,7 @@ const treeData = {
       name: "석영 I",
       price: "1Msp >=400",
       description: "수정 포인트로 환산되는 양이 20% 증가합니다.",
-      position: { x: "20%", y: "65%" },
+      position: { x: "30%", y: "55%" },
       bought: true,
       color: {
         hueRotate: "270deg",
@@ -175,7 +175,7 @@ const treeData = {
       name: "석영 II",
       price: "1MsP >=1200",
       description: "수정 포인트로 환산되는 양이 40% 증가합니다.",
-      position: { x: "30%", y: "75%" },
+      position: { x: "30%", y: "65%" },
       bought: true,
       color: {
         hueRotate: "270deg",
@@ -462,7 +462,7 @@ const treeData = {
       price: "-200 1s",
       description:
         "마일스톤 요구량이 30% 감소됩니다.",
-      position: { x: "10%", y: "75%" },
+      position: { x: "10%", y: "65%" },
       bought: true,
       color: {
         hueRotate: "0deg",
@@ -475,7 +475,7 @@ const treeData = {
       price: "\'베개\' 계산기 1개<br>수정 >=15000cm³",
       description:
         "보석과 관련된 계산기 옵션 5종류를 추가합니다.",
-      position: { x: "10%", y: "65%" },
+      position: { x: "20%", y: "65%" },
       bought: true,
       color: {
         hueRotate: "0deg",
@@ -553,7 +553,7 @@ const treeData = {
       price: "1MsP >=3000",
       description:
         "석영 I, 석영 II의 효과를 대체합니다. 수정 포인트로 환산되는 양이 100% 증가합니다.",
-      position: { x: "30%", y: "85%" },
+      position: { x: "30%", y: "75%" },
       bought: false,
       color: {
         hueRotate: "270deg",
