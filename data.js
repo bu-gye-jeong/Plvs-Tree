@@ -140,7 +140,7 @@ const treeData = {
       price: "1MsP >=200",
       description: "숫자를 차감하는 업그레이드는 10% 덜 차감하게 됩니다.",
       position: { x: "30%", y: "25%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "270deg",
         saturate: "70%",
