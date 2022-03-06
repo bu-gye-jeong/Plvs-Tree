@@ -568,6 +568,7 @@ const treeData = {
         "베뮤니티와 관련된 업그레이드를 추가합니다.<br>해금법 : 4시간 동안 채팅 쿨타임 1시간->8시간 동안 수정 성장률 -99%",
       position: { x: "80%", y: "35%" },
       bought: true,
+      letterSpacing: -5,
       color: {
         hueRotate: "230deg",
         saturate: "50%",
