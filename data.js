@@ -504,9 +504,9 @@ const treeData = {
       position: { x: "50%", y: "75%" },
       bought: false,
       color: {
-        hueRotate: "0deg",
-        saturate: "150%",
-        brightness: "80%",
+        hueRotate: "220deg",
+        saturate: "80%",
+        brightness: "60%",
       },
     },
     {
@@ -583,9 +583,9 @@ const treeData = {
       position: { x: "70%", y: "35%" },
       bought: true,
       color: {
-        hueRotate: "0deg",
-        saturate: "150%",
-        brightness: "80%",
+        hueRotate: "30deg",
+        saturate: "100%",
+        brightness: "60%",
       },
     },
     {
@@ -596,29 +596,29 @@ const treeData = {
       position: { x: "80%", y: "55%" },
       bought: false,
       color: {
-        hueRotate: "0deg",
-        saturate: "150%",
-        brightness: "80%",
+        hueRotate: "40deg",
+        saturate: "40%",
+        brightness: "90%",
       },
     },
     {
       name: "스토리지 II",
       price: "-200 1s",
       description:
-        "모든 유저는 각각 하나만의 개인 채널을 만들 수 있게 됩니다.",
+        "계산기를 1개 더 보관할 수 있게 됩니다.<br>해금법 : 5% 확률로 숫자 -250(10회 반복)->숫자 >=6000->1분 소요",
       position: { x: "70%", y: "45%" },
       bought: false,
       color: {
-        hueRotate: "0deg",
-        saturate: "150%",
-        brightness: "80%",
+        hueRotate: "30deg",
+        saturate: "100%",
+        brightness: "60%",
       },
     },
     {
       name: "개인 채널",
       price: "\'베개\' 계산기 1개 -100",
       description:
-        "훈장이 3개 이상인 유저는 자신만의 역할 색깔을 정할 수 있게 됩니다.",
+        "모든 유저는 각각 하나만의 개인 채널을 만들 수 있게 됩니다.",
       position: { x: "80%", y: "45%" },
       bought: false,
       color: {
@@ -631,13 +631,13 @@ const treeData = {
       name: "개인 색상",
       price: "\'베개\' 계산기 1개 -300",
       description:
-        "베뮤니티와 관련된 업그레이드를 추가합니다.<br>해금법 : 4시간 동안 채팅 쿨타임 1시간->8시간 동안 수정 성장률 -99%",
+        "훈장이 3개 이상인 유저는 자신만의 역할 색깔을 정할 수 있게 됩니다.",
       position: { x: "90%", y: "45%" },
       bought: false,
       color: {
-        hueRotate: "290deg",
-        saturate: "100%",
-        brightness: "200%",
+        hueRotate: "170deg",
+        saturate: "80%",
+        brightness: "100%",
       },
     },
   ],
