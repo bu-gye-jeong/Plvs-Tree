@@ -462,7 +462,7 @@ const treeData = {
       price: "-200 1s",
       description:
         "마일스톤 요구량이 30% 감소됩니다.",
-      position: { x: "10%", y: "65%" },
+      position: { x: "20%", y: "65%" },
       bought: true,
       color: {
         hueRotate: "0deg",
@@ -475,7 +475,7 @@ const treeData = {
       price: "\'베개\' 계산기 1개<br>수정 >=15000cm³",
       description:
         "보석과 관련된 계산기 옵션 5종류를 추가합니다.",
-      position: { x: "20%", y: "65%" },
+      position: { x: "10%", y: "65%" },
       bought: true,
       color: {
         hueRotate: "0deg",
@@ -540,7 +540,7 @@ const treeData = {
       price: "1MsP 10h",
       description:
         "앞으로 얻는 계산기는 버튼 슬롯이 추가됩니다.",
-      position: { x: "30%", y: "15%" },
+      position: { x: "80%", y: "35%" },
       bought: true,
       color: {
         hueRotate: "0deg",
