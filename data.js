@@ -187,7 +187,7 @@ const treeData = {
       name: "< Point >",
       price: "1MsP >=800 -50 2h",
       description: '게임 상태를 "티어 1"으로 변경합니다.',
-      position: { x: "40%", y: "5%" },
+      position: { x: "60%", y: "5%" },
       bought: true,
       color: {
         hueRotate: "170deg",
@@ -436,7 +436,7 @@ const treeData = {
       price: "설명 참조",
       description:
         "게임 상태를 \'티어 2\'으로 변경합니다.<br>해금법 : 1MsP->7인 이상 동의->2시간 소요->숫자 -1200->30분 소요->숫자 >=5000->계산기 2개 소모->수정 -15000cm³->10분 소요",
-      position: { x: "90%", y: "55%" },
+      position: { x: "70%", y: "5%" },
       bought: true,
       color: {
         hueRotate: "170deg",
