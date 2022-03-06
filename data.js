@@ -566,7 +566,7 @@ const treeData = {
       price: "T2 설명 참조",
       description:
         "베뮤니티와 관련된 업그레이드를 추가합니다.<br>해금법 : 4시간 동안 채팅 쿨타임 1시간->8시간 동안 수정 성장률 -99%",
-      position: { x: "90%", y: "35%" },
+      position: { x: "80%", y: "35%" },
       bought: true,
       color: {
         hueRotate: "230deg",
