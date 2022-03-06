@@ -504,7 +504,7 @@ const treeData = {
       position: { x: "50%", y: "75%" },
       bought: false,
       color: {
-        hueRotate: "110deg",
+        hueRotate: "140deg",
         saturate: "80%",
         brightness: "60%",
       },
@@ -583,7 +583,7 @@ const treeData = {
       position: { x: "70%", y: "35%" },
       bought: true,
       color: {
-        hueRotate: "280deg",
+        hueRotate: "330deg",
         saturate: "100%",
         brightness: "60%",
       },
@@ -596,7 +596,7 @@ const treeData = {
       position: { x: "80%", y: "55%" },
       bought: true,
       color: {
-        hueRotate: "290deg",
+        hueRotate: "330deg",
         saturate: "40%",
         brightness: "90%",
       },
@@ -609,7 +609,7 @@ const treeData = {
       position: { x: "70%", y: "45%" },
       bought: false,
       color: {
-        hueRotate: "280deg",
+        hueRotate: "330deg",
         saturate: "100%",
         brightness: "60%",
       },
@@ -635,7 +635,7 @@ const treeData = {
       position: { x: "90%", y: "45%" },
       bought: false,
       color: {
-        hueRotate: "60deg",
+        hueRotate: "190deg",
         saturate: "80%",
         brightness: "100%",
       },
@@ -648,7 +648,7 @@ const treeData = {
       position: { x: "80%", y: "65%" },
       bought: false,
       color: {
-        hueRotate: "290deg",
+        hueRotate: "320deg",
         saturate: "40%",
         brightness: "90%",
       },
