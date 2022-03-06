@@ -585,7 +585,7 @@ const treeData = {
       color: {
         hueRotate: "30deg",
         saturate: "100%",
-        brightness: "60%",
+        brightness: "30%",
       },
     },
     {
@@ -594,7 +594,7 @@ const treeData = {
       description:
         "수정 크기의 Cottoned 소프트캡이 33% 약화됩니다.",
       position: { x: "80%", y: "55%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "40deg",
         saturate: "40%",
@@ -611,7 +611,7 @@ const treeData = {
       color: {
         hueRotate: "30deg",
         saturate: "100%",
-        brightness: "60%",
+        brightness: "30%",
       },
     },
     {
@@ -638,6 +638,19 @@ const treeData = {
         hueRotate: "170deg",
         saturate: "80%",
         brightness: "100%",
+      },
+    },
+    {
+      name: "토파즈 II",
+      price: "-200 20m",
+      description:
+        "수정 크기의 Cottoned 소프트캡이 33% 약화됩니다.",
+      position: { x: "80%", y: "65%" },
+      bought: false,
+      color: {
+        hueRotate: "40deg",
+        saturate: "40%",
+        brightness: "90%",
       },
     },
   ],
@@ -706,5 +719,6 @@ const treeData = {
     [46, 48],
     [45, 49],
     [45, 50],
+    [47, 51],
   ],
 };
