@@ -540,7 +540,7 @@ const treeData = {
       price: "1MsP 10h",
       description:
         "앞으로 얻는 계산기는 버튼 슬롯이 추가됩니다.",
-      position: { x: "30%", y: "35%" },
+      position: { x: "30%", y: "15%" },
       bought: true,
       color: {
         hueRotate: "0deg",
