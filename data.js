@@ -186,7 +186,7 @@ const treeData = {
     {
       name: "< Point >",
       price: "1MsP >=800 -50 2h",
-      description: '게임 상태를 "티어 1"으로 변경합니다.',
+      description: "게임 상태를 \'티어 1\'으로 변경합니다.",
       position: { x: "60%", y: "5%" },
       bought: true,
       color: {
@@ -424,7 +424,7 @@ const treeData = {
       price: "1MsP -800 3h<br>5인 이상 동의",
       description: "구매에 특별한 트리거를 요구하는 업그레이드를 추가합니다.",
       position: { x: "90%", y: "25%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "230deg",
         saturate: "50%",
@@ -646,11 +646,63 @@ const treeData = {
       description:
         "수정 크기의 Cottoned 소프트캡이 33% 약화됩니다.",
       position: { x: "80%", y: "65%" },
+      bought: true,
+      color: {
+        hueRotate: "280deg",
+        saturate: "100%",
+        brightness: "100%",
+      },
+    },
+    {
+      name: "기반암",
+      price: "설명 참조",
+      description:
+        "Blanketed 하드캡은 더 이상 하드캡이 아니게 되며, Cottoned보다 더욱 강력한 소프트캡이 됩니다.<br>해금법 : Shapez.io에서 CgCgCg--:Cy--CyCy:Ww--WwWw:Cc--CcCc 500개 저장하기, 숫자 -500",
+      position: { x: "90%", y: "95%" },
+      bought: false,
+      color: {
+        hueRotate: "250deg",
+        saturate: "0%",
+        brightness: "90%",
+      },
+    },
+    {
+      name: "< Triangle >",
+      price: "설명 참조",
+      description:
+        "게임 상태를 \'티어 3\'으로 변경합니다.<br>해금법 : 숫자 25000+->50% 확률로 숫자 -1000->40% 확률로 숫자 -1200->30% 확률로 숫자 -1400->20% 확률로 숫자 -1600->10% 확률로 숫자 -1800->계산기 8개 소모->8인 이상 동의->8시간 소요->수정 50000cm³+->수정 크기 리셋->마인크래프트 JE 1.18.1에서 3인 이상이 기본 설정으로 엔더 드래곤 처치->8시간 동안 채팅 쿨타임 6시간->Tetr.io에서 FT7 기본 설정 게임으로 베개에게 승리",
+      position: { x: "80%", y: "5%" },
+      bought: false,
+      color: {
+        hueRotate: "170deg",
+        saturate: "100%",
+        brightness: "70%",
+      },
+    },
+    {
+      name: "토파즈 III",
+      price: "설명 참조",
+      description:
+        "수정 크기의 Cottoned 소프트캡이 정지됩니다.<br>해금법 : Shapez.io Industries에서 __3y__3y:Sg--Sg--:3r__3r__ 3000개 저장하기, 숫자 -300, 30분 소요",
+      position: { x: "80%", y: "75%" },
       bought: false,
       color: {
         hueRotate: "280deg",
         saturate: "100%",
         brightness: "100%",
+      },
+    },
+    {
+      name: "저비용 II",
+      price: "1MsP",
+      description:
+        "숫자를 차감하는 업그레이드는 20% 덜 차감하게 됩니다.",
+      position: { x: "40%", y: "35%" },
+      bought: false,
+      color: {
+        hueRotate: "270deg",
+        saturate: "70%",
+        brightness: "150%",
       },
     },
   ],
@@ -720,5 +772,10 @@ const treeData = {
     [45, 49],
     [45, 50],
     [47, 51],
+    [22, 52],
+    [47, 52],
+    [35, 53],
+    [51, 54],
+    [11, 55],
   ],
 };
