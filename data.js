@@ -274,7 +274,7 @@ const treeData = {
       name: "공작석",
       price: "1MsP",
       description: "수정 포인트의 fibered가 50% 약화됩니다.",
-      position: { x: "40%", y: "75%" },
+      position: { x: "50%", y: "75%" },
       bought: true,
       color: {
         hueRotate: "50deg",
@@ -501,7 +501,7 @@ const treeData = {
       price: "1MsP",
       description:
         "수정 포인트의 Fibered가 정지됩니다.",
-      position: { x: "50%", y: "75%" },
+      position: { x: "40%", y: "75%" },
       bought: false,
       color: {
         hueRotate: "140deg",
@@ -658,7 +658,7 @@ const treeData = {
       price: "설명 참조",
       description:
         "Blanketed 하드캡은 더 이상 하드캡이 아니게 되며, Cottoned보다 더욱 강력한 소프트캡이 됩니다.<br>해금법 : Shapez.io에서 CgCgCg--:Cy--CyCy:Ww--WwWw:Cc--CcCc 500개 저장하기, 숫자 -500",
-      position: { x: "70%", y: "85%" },
+      position: { x: "60%", y: "75%" },
       bought: false,
       color: {
         hueRotate: "250deg",
@@ -683,9 +683,9 @@ const treeData = {
       name: "토파즈 III",
       price: "설명 참조",
       description:
-        "수정 크기의 Cottoned 소프트캡이 정지됩니다.<br>해금법 : Shapez.io Industries에서 __3y__3y:Sg--Sg--:3r__3r__ 3000개 저장하기, 숫자 -300, 30분 소요",
+        "수정 크기의 Cottoned 소프트캡이 정지됩니다.<br>해금법 : Shapez.io에서 Sy--Sy--:------Sy 3000개 저장하기, 숫자 -300, 30분 소요",
       position: { x: "80%", y: "75%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "280deg",
         saturate: "100%",
@@ -703,6 +703,19 @@ const treeData = {
         hueRotate: "270deg",
         saturate: "70%",
         brightness: "150%",
+      },
+    },
+    {
+      name: "다이아몬드",
+      price: "설명 참조",
+      description:
+        "수정 크기가 100,000cm³보다 커지면, 환산되는 수정 포인트가 2배가 됩니다. 이는 소프트캡을 무시합니다.<br>해금법 : 3인 이상이 Shapez.io에서 RcCbRcCb:Sp--Sy--:Cu--Cu--:Ru--Ru-- 4000개 저장하기, 수정 99999cm³+, 숫자 -500",
+      position: { x: "70%", y: "75%" },
+      bought: false,
+      color: {
+        hueRotate: "85deg",
+        saturate: "65%",
+        brightness: "175%",
       },
     },
   ],
@@ -777,5 +790,7 @@ const treeData = {
     [35, 53],
     [51, 54],
     [11, 55],
+    [52, 56, true],
+    [54, 56],
   ],
 };
