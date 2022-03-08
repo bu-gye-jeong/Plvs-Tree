@@ -659,7 +659,7 @@ const treeData = {
       description:
         "Blanketed 하드캡은 더 이상 하드캡이 아니게 되며, Cottoned보다 더욱 강력한 소프트캡이 됩니다.<br>해금법 : Shapez.io에서 CgCgCg--:Cy--CyCy:Ww--WwWw:Cc--CcCc 500개 저장하기, 숫자 -500",
       position: { x: "60%", y: "75%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "250deg",
         saturate: "0%",
