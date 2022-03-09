@@ -262,7 +262,7 @@ const treeData = {
       price: "T1 1MsP 1m",
       description:
         "어떠한 이유로 관리자가 숫자를 셀 경우, 10% 확률로 숫자를 잘못 셉니다. 이 경우, 잘못 센 대가로 숫자가 5 추가로 증가합니다.",
-      position: { x: "30%", y: "35%" },
+      position: { x: "30%", y: "15%" },
       bought: false,
       color: {
         hueRotate: "120deg",
@@ -697,7 +697,7 @@ const treeData = {
       price: "1MsP",
       description:
         "숫자를 차감하는 업그레이드는 20% 덜 차감하게 됩니다.",
-      position: { x: "40%", y: "35%" },
+      position: { x: "30%", y: "35%" },
       bought: false,
       color: {
         hueRotate: "270deg",
@@ -716,6 +716,19 @@ const treeData = {
         hueRotate: "85deg",
         saturate: "65%",
         brightness: "175%",
+      },
+    },
+    {
+      name: "기적",
+      price: "설명 참조",
+      description:
+        " 4배 이상 희귀한 계산기 옵션이 등장할 수 있게 됩니다. 이러한 "희귀한" 옵션은 계산기마다 최대 1개씩만 부여될 수 있으며, 압도적인 성능을 보입니다.<br>해금법 : 4인 이상 동의->숫자 5000+->숫자 -150->???",
+      position: { x: "10%", y: "75%" },
+      bought: false,
+      color: {
+        hueRotate: "270deg",
+        saturate: "0%",
+        brightness: "200%",
       },
     },
   ],
@@ -768,11 +781,11 @@ const treeData = {
     [9, 37],
     [9, 38],
     [16, 38, true],
-    [20, 38],
+    [20, 38, true],
     [33, 38],
     [7, 39],
     [9, 39],
-    [13, 40],
+    [13, 40, true],
     [29, 40, true],
     [25, 41],
     [41, 42],
@@ -791,6 +804,8 @@ const treeData = {
     [51, 54],
     [11, 55],
     [52, 56, true],
-    [54, 56],
+    [54, 56, true],
+    [19, 57],
+    [38, 57],
   ],
 };
