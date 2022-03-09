@@ -663,7 +663,7 @@ const treeData = {
       color: {
         hueRotate: "250deg",
         saturate: "0%",
-        brightness: "90%",
+        brightness: "40%",
       },
     },
     {
