@@ -465,9 +465,9 @@ const treeData = {
       position: { x: "20%", y: "65%" },
       bought: true,
       color: {
-        hueRotate: "0deg",
-        saturate: "150%",
-        brightness: "80%",
+        hueRotate: "130deg",
+        saturate: "100%",
+        brightness: "130%",
       },
     },
     {
@@ -543,9 +543,9 @@ const treeData = {
       position: { x: "80%", y: "35%" },
       bought: true,
       color: {
-        hueRotate: "0deg",
-        saturate: "150%",
-        brightness: "80%",
+        hueRotate: "310deg",
+        saturate: "100%",
+        brightness: "200%",
       }
     },
     {
