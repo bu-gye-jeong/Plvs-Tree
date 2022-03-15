@@ -711,7 +711,7 @@ const treeData = {
       description:
         "수정 크기가 100,000cm³보다 커지면, 환산되는 수정 포인트가 2배가 됩니다. 이는 소프트캡을 무시합니다.<br>해금법 : 3인 이상이 Shapez.io에서 RcCbRcCb:Sp--Sy--:Cu--Cu--:Ru--Ru-- 4000개 저장하기, 수정 99999cm³+, 숫자 -500",
       position: { x: "70%", y: "75%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "85deg",
         saturate: "65%",
