@@ -325,7 +325,7 @@ const treeData = {
       description:
         "숫자에 비례해서, 수정 포인트 환산량이 증가합니다. (2.15 오후 2시 기준 1.4배)",
       position: { x: "20%", y: "75%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "-40deg",
         saturate: "50%",
@@ -338,7 +338,7 @@ const treeData = {
       description:
         "사용하지 않은 계산기는 파괴할 수 있게 됩니다. 파괴한 계산기의 품질만큼의 숫자를 더합니다.",
       position: { x: "50%", y: "45%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "240deg",
         saturate: "50%",
@@ -579,7 +579,7 @@ const treeData = {
       name: "스토리지 I",
       price: "T2 설명 참조",
       description:
-        "계산기를 1개 더 보관할 수 있게 됩니다.<br>해금법 : 30% 확률로 숫자 -25(10회 반복)->숫자 >=5000->1분 소요",
+        "계산기를 1개 더 보관할 수 있게 됩니다.<br>해금법 : 숫자 -25(30%)(10회 반복)->숫자 >=5000->1분 소요",
       position: { x: "70%", y: "35%" },
       bought: true,
       color: {
@@ -605,9 +605,9 @@ const treeData = {
       name: "스토리지 II",
       price: "설명 참조",
       description:
-        "계산기를 1개 더 보관할 수 있게 됩니다.<br>해금법 : 5% 확률로 숫자 -250(10회 반복)->숫자 >=6000->1분 소요",
-      position: { x: "70%", y: "45%" },
-      bought: false,
+        "계산기를 1개 더 보관할 수 있게 됩니다.<br>해금법 : 숫자 -250(5%)(10회 반복)->숫자 >=6000->1분 소요",
+      position: { x: "70%", y: "40%" },
+      bought: true,
       color: {
         hueRotate: "280deg",
         saturate: "100%",
@@ -657,7 +657,7 @@ const treeData = {
       name: "기반암",
       price: "설명 참조",
       description:
-        "Blanketed 하드캡은 더 이상 하드캡이 아니게 되며, Cottoned보다 더욱 강력한 소프트캡이 됩니다.<br>해금법 : Shapez.io에서 CgCgCg--:Cy--CyCy:Ww--WwWw:Cc--CcCc 500개 저장하기, 숫자 -500",
+        "Blanketed 하드캡은 더 이상 하드캡이 아니게 되며, Cottoned보다 더욱 강력한 소프트캡이 됩니다.<br>해금법 : Shapez.io에서 CgCgCg--:Cy--CyCy:Ww--WwWw:Cc--CcCc 500개 저장, 숫자 -500",
       position: { x: "60%", y: "75%" },
       bought: true,
       color: {
@@ -670,7 +670,7 @@ const treeData = {
       name: "< Triangle >",
       price: "설명 참조",
       description:
-        "게임 상태를 \'티어 3\'으로 변경합니다.<br>해금법 : 숫자 25000+->50% 확률로 숫자 -1000->40% 확률로 숫자 -1200->30% 확률로 숫자 -1400->20% 확률로 숫자 -1600->10% 확률로 숫자 -1800->계산기 8개 소모->8인 이상 동의->8시간 소요->수정 50000cm³+->수정 크기 리셋->마인크래프트 JE 1.18.1에서 3인 이상이 기본 설정으로 엔더 드래곤 처치->8시간 동안 채팅 쿨타임 6시간->Tetr.io에서 FT7 기본 설정 게임으로 베개에게 승리",
+        "게임 상태를 \'티어 3\'으로 변경합니다.<br>해금법 : 숫자 25000+->숫자 -1000(50%)->숫자 -1200(40%)->확률로 숫자 -1400(30%)->숫자 -1600(20%)->숫자 -1800(10%)->계산기 8개 소모->8인 이상 동의->8시간 소요->수정 50000cm³+->수정 크기 리셋->마인크래프트 JE 1.18.1에서 기본 설정으로 엔더 드래곤 처치(3인)->8시간 동안 채팅 쿨타임 6시간->Tetr.io에서 FT7 기본 설정 게임으로 베개에게 승리",
       position: { x: "80%", y: "5%" },
       bought: false,
       color: {
@@ -683,7 +683,7 @@ const treeData = {
       name: "토파즈 III",
       price: "설명 참조",
       description:
-        "수정 크기의 Cottoned 소프트캡이 정지됩니다.<br>해금법 : Shapez.io에서 Sy--Sy--:------Sy 3000개 저장하기, 숫자 -300, 30분 소요",
+        "수정 크기의 Cottoned 소프트캡이 정지됩니다.<br>해금법 : Shapez.io에서 Sy--Sy--:------Sy 3000개 저장, 숫자 -300, 30분 소요",
       position: { x: "80%", y: "75%" },
       bought: true,
       color: {
@@ -697,8 +697,8 @@ const treeData = {
       price: "1MsP",
       description:
         "숫자를 차감하는 업그레이드는 20% 덜 차감하게 됩니다.",
-      position: { x: "30%", y: "35%" },
-      bought: false,
+      position: { x: "30%", y: "30%" },
+      bought: true,
       color: {
         hueRotate: "270deg",
         saturate: "70%",
@@ -709,7 +709,7 @@ const treeData = {
       name: "다이아몬드",
       price: "설명 참조",
       description:
-        "수정 크기가 100,000cm³보다 커지면, 환산되는 수정 포인트가 2배가 됩니다. 이는 소프트캡을 무시합니다.<br>해금법 : 3인 이상이 Shapez.io에서 RcCbRcCb:Sp--Sy--:Cu--Cu--:Ru--Ru-- 4000개 저장하기, 수정 99999cm³+, 숫자 -500",
+        "수정 크기가 100,000cm³보다 커지면, 환산되는 수정 포인트가 2배가 됩니다. 이는 소프트캡을 무시합니다.<br>해금법 : Shapez.io에서 RcCbRcCb:Sp--Sy--:Cu--Cu--:Ru--Ru-- 4000개 저장(3인), 수정 99999cm³+, 숫자 -500",
       position: { x: "70%", y: "75%" },
       bought: true,
       color: {
@@ -722,13 +722,52 @@ const treeData = {
       name: "기적",
       price: "설명 참조",
       description:
-        "4배 이상 희귀한 계산기 옵션이 등장할 수 있게 됩니다. 이러한 \'희귀한\' 옵션은 계산기마다 최대 1개씩만 부여될 수 있으며, 압도적인 성능을 보입니다.<br>해금법 : 4인 이상 동의->숫자 5000+->숫자 -150->Tetr.io에서 베개보다 TR이 낮은 참가자가 A+ 이상->Shapez.io에서 2인 이상이 --Rr--Rr:--Cw--Cw:Rr--Rr--:CwRrCwRr 800개 만들기->???",
+        "4배 이상 희귀한 계산기 옵션이 등장할 수 있게 됩니다. 이러한 \'희귀한\' 옵션은 계산기마다 최대 1개씩만 부여될 수 있으며, 압도적인 성능을 보입니다.<br>해금법(얕은 미래) : 4인 이상 동의->숫자 >=5000->숫자 -150->Tetr.io에서 베개보다 TR이 낮은 참가자가 A+ 이상->Shapez.io에서 --Rr--Rr:--Cw--Cw:Rr--Rr--:CwRrCwRr 800개 저장(2인)->숫자 -150 또는 숫자 >=15000->Shapez.io에서 Cr------:Cp------:Cw------ 50개 저장(3인)",
       position: { x: "10%", y: "75%" },
-      bought: false,
+      bought: true,
       color: {
         hueRotate: "270deg",
         saturate: "0%",
         brightness: "200%",
+      },
+    },
+    {
+      name: "스토리지 III",
+      price: "설명 참조",
+      description:
+        "계산기를 1개 더 보관할 수 있게 됩니다.<br>해금법 : Shapez.io에서 RuRuRuRu:RuRuRuRu:RuRuRuRu 200개 저장(3인)->숫자 -10->숫자 -20->숫자 -30->숫자 -40(64%)->숫자 -100(32%)->숫자 -200(16%)->숫자 -300(8%)->숫자 -400(4%)->숫자 -800(2%)->숫자 -1600(1%)->숫자 >=8000->1분 소요",
+      position: { x: "70%", y: "45%" },
+      bought: false,
+      color: {
+        hueRotate: "280deg",
+        saturate: "100%",
+        brightness: "60%",
+      },
+    },
+    {
+      name: "저비용 III",
+      price: "설명 참조",
+      description:
+        "숫자를 차감하는 업그레이드는 40% 덜 차감하게 됩니다.<br>해금법 : 1MsP 또는 숫자 -400, Mindustry의 아무 캠페인 맵에서 티타늄 1000개 저장(2인)",
+      position: { x: "30%", y: "35%" },
+      bought: true,
+      color: {
+        hueRotate: "270deg",
+        saturate: "70%",
+        brightness: "150%",
+      },
+    },
+    {
+      name: "저비용 IV",
+      price: "설명 참조",
+      description:
+        "숫자를 차감하는 업그레이드는 50% 덜 차감하게 됩니다. 수정 크기를 차감하는 업그레이드는 수정 크기를 차감하지 않게 됩니다.<br>해금법 : 1MsP, 숫자 -1000, Mindustry의 아무 캠페인 맵에서 강화 유리 1500개 저장(2인)",
+      position: { x: "30%", y: "40%" },
+      bought: false,
+      color: {
+        hueRotate: "270deg",
+        saturate: "70%",
+        brightness: "150%",
       },
     },
   ],
@@ -807,5 +846,8 @@ const treeData = {
     [54, 56, true],
     [19, 57],
     [38, 57],
+    [48, 58],
+    [55, 59],
+    [59, 60],
   ],
 };
